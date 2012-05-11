@@ -82,7 +82,7 @@ public class IndeterminateTest
     Assert.assertFalse(f3.toString().equals(f0.toString()));
   }
 
-  @Test public void testHashcode()
+  @Test public void testHashCode()
   {
     final Indeterminate.Success<Integer, String> s0 =
       new Indeterminate.Success<Integer, String>(Integer.valueOf(23));
