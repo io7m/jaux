@@ -55,7 +55,7 @@ public class OptionTest
 
   @Test public void testSome()
   {
-    final Option<Integer> n = new Option.Some<Integer>(new Integer(32));
+    final Option<Integer> n = new Option.Some<Integer>(Integer.valueOf(32));
     Assert.assertEquals(Type.OPTION_SOME, n.type);
     Assert.assertTrue(n.isSome());
     Assert.assertFalse(n.isNone());
