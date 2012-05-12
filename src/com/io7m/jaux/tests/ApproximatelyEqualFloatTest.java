@@ -14,10 +14,12 @@
  * IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-package com.io7m.jaux;
+package com.io7m.jaux.tests;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import com.io7m.jaux.ApproximatelyEqualFloat;
 
 public class ApproximatelyEqualFloatTest
 {
