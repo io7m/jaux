@@ -11,7 +11,7 @@ public class FunctionTest
   @Test public void testCorrect()
   {
     final Function<Integer, Integer> f = new Function<Integer, Integer>() {
-      @Override public Integer call(
+      public Integer call(
         final Integer x)
       {
         return Integer.valueOf(x.intValue() * 3);
