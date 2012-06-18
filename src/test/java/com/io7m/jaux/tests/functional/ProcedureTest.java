@@ -15,7 +15,7 @@ public class ProcedureTest
     final AtomicInteger value = new AtomicInteger(0);
 
     final Procedure<Integer> f = new Procedure<Integer>() {
-      public void call(
+      @Override public void call(
         final Integer x)
       {
         value.addAndGet(x.intValue());
