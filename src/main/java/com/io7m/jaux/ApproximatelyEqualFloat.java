@@ -22,27 +22,31 @@
 
 package com.io7m.jaux;
 
-public final class ApproximatelyEqualDouble
+/**
+ * Approximate equality for single-precision floating point values.
+ */
+
+public final class ApproximatelyEqualFloat
 {
   /**
-   * An error epsilon value appropriate to double precision floating point
+   * An error epsilon value appropriate to single precision floating point
    * numbers.
    */
 
-  public static final double DOUBLE_ERROR = 0.00000000000001;
+  public static final float FLOAT_ERROR = 0.000001f;
 
   /**
-   * @return <code>approximatelyEqualExplicit(x, y, DOUBLE_ERROR)</code>
+   * @return <code>approximatelyEqualExplicit(x, y, FLOAT_ERROR)</code>
    */
 
   public static boolean approximatelyEqual(
-    final double x,
-    final double y)
+    final float x,
+    final float y)
   {
-    return ApproximatelyEqualDouble.approximatelyEqualExplicit(
+    return ApproximatelyEqualFloat.approximatelyEqualExplicit(
       x,
       y,
-      ApproximatelyEqualDouble.DOUBLE_ERROR);
+      ApproximatelyEqualFloat.FLOAT_ERROR);
   }
 
   /**
@@ -53,24 +57,24 @@ public final class ApproximatelyEqualDouble
    */
 
   public static boolean approximatelyEqualExplicit(
-    final double x,
-    final double y,
-    final double e)
+    final float x,
+    final float y,
+    final float e)
   {
     if (x == y) {
       return true;
     }
 
-    final double abs_x = Math.abs(x);
-    final double abs_y = Math.abs(y);
-    final double delta = x - y;
+    final float abs_x = Math.abs(x);
+    final float abs_y = Math.abs(y);
+    final float delta = x - y;
 
     if (abs_y > abs_x) {
-      final double r = Math.abs(delta / y);
+      final float r = Math.abs(delta / y);
       return r <= e;
     }
 
-    final double r = Math.abs(delta / x);
+    final float r = Math.abs(delta / x);
     return r <= e;
   }
 }

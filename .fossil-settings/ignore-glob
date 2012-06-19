@@ -1,4 +1,5 @@
 bin
-javadoc
 build
 ext
+javadoc
+target

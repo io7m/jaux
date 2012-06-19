@@ -17,13 +17,11 @@
 package com.io7m.jaux.functional;
 
 /**
- * Non-dependent unary function type, equivalent to
- * <code>Function<A, Unit></code> but substituting <code>void</code> for
- * <code>Unit</code> to avoid allocating useless objects.
+ * Non-dependent unary function type.
  */
 
-public interface Procedure<A>
+public interface Function<A, B>
 {
-  void call(
+  public B call(
     A x);
 }

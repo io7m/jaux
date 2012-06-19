@@ -346,7 +346,7 @@ public class PropertyUtilsTest
   {
     final @Nonnull Properties properties =
       PropertyUtils
-        .loadFromFile("src/com/io7m/jaux/tests/PropertyUtilsTest.properties");
+        .loadFromFile("src/test/resources/PropertyUtilsTest.properties");
     Assert.assertTrue(PropertyUtils.getInteger(properties, "integer") == 23);
   }
 
