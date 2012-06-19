@@ -22,6 +22,10 @@
 
 package com.io7m.jaux;
 
+/**
+ * Approximate equality for double-precision floating point values.
+ */
+
 public final class ApproximatelyEqualDouble
 {
   /**

@@ -22,6 +22,10 @@
 
 package com.io7m.jaux;
 
+/**
+ * Approximate equality for single-precision floating point values.
+ */
+
 public final class ApproximatelyEqualFloat
 {
   /**
