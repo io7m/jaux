@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document
+  xmlns="http://maven.apache.org/XDOC/2.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+
+  <properties>
+    <title>io7m-jaux</title>
+  </properties>
+
+  <body>
+    <subsection name="jaux">
+      <p>
+        The <var>jaux</var> package implements a miscellaneous set
+        of classes that would otherwise be reinvented repeatedly by
+        software on this site.
+      </p>
+    </subsection>
+    <subsection name="features">
+      <ul>
+        <li>Constraints class for "assertions that cannot be turned off".</li>
+        <li>CheckedMath class for machine integer arithmetic that does not silently overflow.</li>
+        <li>"Functional" programming features - Function class, Unit, Option types, etc.</li>
+        <li>Type-safe interface to Java properties.</li>
+        <li>Fully documented (Javadoc).</li>
+        <li>100% automated unit test coverage.</li>
+        <li>ISC license.</li>
+        <li>Platform independent (tested on FreeBSD, Linux, Mac OS X, Solaris, Windows XP).</li>
+      </ul>
+    </subsection>
+  </body>
+
+</document>
