@@ -72,7 +72,7 @@
       </table>
     </section>
     <section name="Documentation">
-      <table class="software_releases page_table" summary="Current project releases">
+      <table class="documentation_releases page_table" summary="Current project documentation releases">
         <thead class="page_table_head">
           <tr>
             <th class="page_table_column_name">Date</th>
@@ -120,7 +120,7 @@
       </table>
     </section>
     <section name="Changes">
-      <table class=" page_table" summary="Changes">
+      <table class="changelog page_table" summary="Changes">
         <tr class="page_table_row">
           <td class="page_table_column">2012-06-19</td>
           <td class="page_table_column">Release: io7m-jaux 2.0.0</td>
