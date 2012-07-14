@@ -13,50 +13,50 @@
         <thead class="page_table_head">
           <tr>
             <th class="page_table_column_name">Date</th>
-            <th class="page_table_column_name">Package</th>
             <th class="page_table_column_name">Size</th>
             <th class="page_table_column_name">PGP</th>
+            <th class="page_table_column_name">Package</th>
           </tr>
         </thead>
         <tbody>
           <tr class="page_table_row">
             <td class="page_table_column">2012-07-14</td>
-            <td class="page_table_column">
-              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.1.1-sources.jar">io7m-jaux-2.1.1-sources.jar</a>
-            </td>
             <td class="page_table_column">18037</td>
             <td class="page_table_column">
               <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.1.1-sources.jar.asc">asc</a>
             </td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.1.1-sources.jar">io7m-jaux-2.1.1-sources.jar</a>
+            </td>
           </tr>
           <tr class="page_table_row">
             <td class="page_table_column">2012-07-14</td>
-            <td class="page_table_column">
-              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.1.1.jar">io7m-jaux-2.1.1.jar</a>
-            </td>
             <td class="page_table_column">26290</td>
             <td class="page_table_column">
               <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.1.1.jar.asc">asc</a>
             </td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.1.1.jar">io7m-jaux-2.1.1.jar</a>
+            </td>
           </tr>
           <tr class="page_table_row">
             <td class="page_table_column">2012-07-14</td>
-            <td class="page_table_column">
-              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.1.1-javadoc.jar">io7m-jaux-2.1.1-javadoc.jar</a>
-            </td>
             <td class="page_table_column">137217</td>
             <td class="page_table_column">
               <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.1.1-javadoc.jar.asc">asc</a>
             </td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.1.1-javadoc.jar">io7m-jaux-2.1.1-javadoc.jar</a>
+            </td>
           </tr>
           <tr class="page_table_row">
             <td class="page_table_column">2012-07-14</td>
-            <td class="page_table_column">
-              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.1.1.zip">io7m-jaux-2.1.1.zip</a>
-            </td>
             <td class="page_table_column">69406</td>
             <td class="page_table_column">
               <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.1.1.zip.asc">asc</a>
+            </td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.1.1.zip">io7m-jaux-2.1.1.zip</a>
             </td>
           </tr>
         </tbody>
@@ -68,24 +68,24 @@
         <thead class="page_table_head">
           <tr>
             <th class="page_table_column_name">Date</th>
-            <th class="page_table_column_name">Online</th>
-            <th class="page_table_column_name">Package</th>
             <th class="page_table_column_name">Size</th>
             <th class="page_table_column_name">PGP</th>
+            <th class="page_table_column_name">Online</th>
+            <th class="page_table_column_name">Package</th>
           </tr>
         </thead>
         <tbody>
           <tr class="page_table_row">
             <td class="page_table_column">2012-07-14</td>
+            <td class="page_table_column">152480</td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.1.1-documentation.zip.asc">asc</a>
+            </td>
             <td class="page_table_column">
               <a class="page_link_file" href="http://io7m.com/software/jaux/doc/2.1.1/d1.xhtml">io7m-jaux 2.1.1</a>
             </td>
             <td class="page_table_column">
               <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.1.1-documentation.zip">io7m-jaux-2.1.1-documentation.zip</a>
-            </td>
-            <td class="page_table_column">152480</td>
-            <td class="page_table_column">
-              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.1.1-documentation.zip.asc">asc</a>
             </td>
           </tr>
         </tbody>
