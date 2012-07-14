@@ -4,3 +4,8 @@
 2012-06-19:io7m-jaux-2.0.0.jar:24420
 2012-06-19:io7m-jaux-2.0.0-sources.jar:17266
 2012-06-19:io7m-jaux-2.0.0-javadoc.jar:133512
+2012-07-14:io7m-jaux-2.1.1-sources.jar:18037
+2012-07-14:io7m-jaux-2.1.1.jar:26290
+2012-07-14:io7m-jaux-2.1.1-javadoc.jar:137217
+2012-07-14:io7m-jaux-2.1.1-documentation.zip:152480
+2012-07-14:io7m-jaux-2.1.1.zip:69406
