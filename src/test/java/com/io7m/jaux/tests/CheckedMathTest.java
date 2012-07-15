@@ -37,13 +37,14 @@ public class CheckedMathTest
    * Int.
    */
 
-  @Test(expected = ArithmeticException.class) public void absoluteIntBad()
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public void absoluteIntBad()
   {
     final int x = Integer.MIN_VALUE;
     CheckedMath.absolute(x);
   }
 
-  @Test public void absoluteIntIdentity()
+  @SuppressWarnings("static-method") @Test public void absoluteIntIdentity()
   {
     for (int index = 0; index < 100; ++index) {
       final int x = CheckedMathTest.randomInt();
@@ -52,7 +53,9 @@ public class CheckedMathTest
     }
   }
 
-  @Test public void absoluteIntNegativeCorrect()
+  @SuppressWarnings("static-method") @Test public
+    void
+    absoluteIntNegativeCorrect()
   {
     for (int index = 0; index < 100; ++index) {
       final int x = CheckedMathTest.randomInt();
@@ -61,13 +64,14 @@ public class CheckedMathTest
     }
   }
 
-  @Test(expected = ArithmeticException.class) public void absoluteLongBad()
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public void absoluteLongBad()
   {
     final long x = Long.MIN_VALUE;
     CheckedMath.absolute(x);
   }
 
-  @Test public void absoluteLongIdentity()
+  @SuppressWarnings("static-method") @Test public void absoluteLongIdentity()
   {
     for (long index = 0; index < 100; ++index) {
       final long x = CheckedMathTest.randomLong();
@@ -76,7 +80,9 @@ public class CheckedMathTest
     }
   }
 
-  @Test public void absoluteLongNegativeCorrect()
+  @SuppressWarnings("static-method") @Test public
+    void
+    absoluteLongNegativeCorrect()
   {
     for (long index = 0; index < 100; ++index) {
       final long x = CheckedMathTest.randomLong();
@@ -85,7 +91,7 @@ public class CheckedMathTest
     }
   }
 
-  @Test public void addIntCorrect()
+  @SuppressWarnings("static-method") @Test public void addIntCorrect()
   {
     for (int index = 0; index < 100; ++index) {
       final int x = CheckedMathTest.randomInt();
@@ -95,21 +101,23 @@ public class CheckedMathTest
     }
   }
 
-  @Test(expected = ArithmeticException.class) public void addIntOverflowMax()
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public void addIntOverflowMax()
   {
     final int x = Integer.MAX_VALUE;
     final int y = Integer.MAX_VALUE;
     CheckedMath.add(x, y);
   }
 
-  @Test(expected = ArithmeticException.class) public void addIntOverflowMin()
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public void addIntOverflowMin()
   {
     final int x = Integer.MIN_VALUE;
     final int y = Integer.MIN_VALUE;
     CheckedMath.add(x, y);
   }
 
-  @Test public void addLongCorrect()
+  @SuppressWarnings("static-method") @Test public void addLongCorrect()
   {
     for (long index = 0; index < 100; ++index) {
       final long x = CheckedMathTest.randomLong();
@@ -119,32 +127,31 @@ public class CheckedMathTest
     }
   }
 
-  @Test(expected = ArithmeticException.class) public
-    void
-    addLongOverflowMax()
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public void addLongOverflowMax()
   {
     final long x = Long.MAX_VALUE;
     final long y = Long.MAX_VALUE;
     CheckedMath.add(x, y);
   }
 
-  @Test(expected = ArithmeticException.class) public
-    void
-    addLongOverflowMin()
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public void addLongOverflowMin()
   {
     final long x = Long.MIN_VALUE;
     final long y = Long.MIN_VALUE;
     CheckedMath.add(x, y);
   }
 
-  @Test(expected = ArithmeticException.class) public void divideIntBad()
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public void divideIntBad()
   {
     final int x = Integer.MIN_VALUE;
     final int y = -1;
     CheckedMath.divide(x, y);
   }
 
-  @Test public void divideIntCorrect()
+  @SuppressWarnings("static-method") @Test public void divideIntCorrect()
   {
     for (int index = 0; index < 100; ++index) {
       final int x = CheckedMathTest.randomInt();
@@ -154,14 +161,15 @@ public class CheckedMathTest
     }
   }
 
-  @Test(expected = ArithmeticException.class) public void divideLongBad()
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public void divideLongBad()
   {
     final long x = Long.MIN_VALUE;
     final long y = -1;
     CheckedMath.divide(x, y);
   }
 
-  @Test public void divideLongCorrect()
+  @SuppressWarnings("static-method") @Test public void divideLongCorrect()
   {
     for (long index = 0; index < 100; ++index) {
       final long x = CheckedMathTest.randomLong();
@@ -171,7 +179,7 @@ public class CheckedMathTest
     }
   }
 
-  @Test public void multiplyIntCorrect()
+  @SuppressWarnings("static-method") @Test public void multiplyIntCorrect()
   {
     for (int index = 0; index < 100; ++index) {
       final int x = CheckedMathTest.randomSmallInt();
@@ -181,7 +189,9 @@ public class CheckedMathTest
     }
   }
 
-  @Test public void multiplyIntDoubleCorrect()
+  @SuppressWarnings("static-method") @Test public
+    void
+    multiplyIntDoubleCorrect()
   {
     for (int index = 0; index < 100; ++index) {
       final int x = CheckedMathTest.randomSmallInt();
@@ -191,7 +201,7 @@ public class CheckedMathTest
     }
   }
 
-  @Test public void multiplyIntDoubleOK0()
+  @SuppressWarnings("static-method") @Test public void multiplyIntDoubleOK0()
   {
     final int x = Integer.MAX_VALUE;
     final double y = -1;
@@ -199,7 +209,7 @@ public class CheckedMathTest
     Assert.assertEquals(Integer.MIN_VALUE + 1, z);
   }
 
-  @Test public void multiplyIntDoubleOK1()
+  @SuppressWarnings("static-method") @Test public void multiplyIntDoubleOK1()
   {
     final int x = Integer.MIN_VALUE + 1;
     final double y = -1;
@@ -207,7 +217,8 @@ public class CheckedMathTest
     Assert.assertEquals(Integer.MAX_VALUE, z);
   }
 
-  @Test(expected = ArithmeticException.class) public
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public
     void
     multiplyIntDoubleOverflow0()
   {
@@ -216,7 +227,8 @@ public class CheckedMathTest
     CheckedMath.multiply(x, y);
   }
 
-  @Test(expected = ArithmeticException.class) public
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public
     void
     multiplyIntDoubleOverflow1()
   {
@@ -225,7 +237,8 @@ public class CheckedMathTest
     CheckedMath.multiply(x, y);
   }
 
-  @Test(expected = ArithmeticException.class) public
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public
     void
     multiplyIntDoubleOverflow2()
   {
@@ -234,7 +247,8 @@ public class CheckedMathTest
     CheckedMath.multiply(x, y);
   }
 
-  @Test(expected = ArithmeticException.class) public
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public
     void
     multiplyIntDoubleUnderflow0()
   {
@@ -243,7 +257,8 @@ public class CheckedMathTest
     CheckedMath.multiply(x, y);
   }
 
-  @Test(expected = ArithmeticException.class) public
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public
     void
     multiplyIntDoubleUnderflow1()
   {
@@ -252,7 +267,7 @@ public class CheckedMathTest
     CheckedMath.multiply(x, y);
   }
 
-  @Test public void multiplyIntOK0()
+  @SuppressWarnings("static-method") @Test public void multiplyIntOK0()
   {
     final int x = Integer.MAX_VALUE;
     final int y = -1;
@@ -260,7 +275,7 @@ public class CheckedMathTest
     Assert.assertEquals(Integer.MIN_VALUE + 1, z);
   }
 
-  @Test public void multiplyIntOK1()
+  @SuppressWarnings("static-method") @Test public void multiplyIntOK1()
   {
     final int x = Integer.MIN_VALUE + 1;
     final int y = -1;
@@ -268,18 +283,16 @@ public class CheckedMathTest
     Assert.assertEquals(Integer.MAX_VALUE, z);
   }
 
-  @Test(expected = ArithmeticException.class) public
-    void
-    multiplyIntOverflow0()
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public void multiplyIntOverflow0()
   {
     final int x = Integer.MAX_VALUE;
     final int y = 2;
     CheckedMath.multiply(x, y);
   }
 
-  @Test(expected = ArithmeticException.class) public
-    void
-    multiplyIntOverflow1()
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public void multiplyIntOverflow1()
   {
     final int x = Integer.MAX_VALUE;
     final int y = -2;
@@ -290,34 +303,31 @@ public class CheckedMathTest
    * Long.
    */
 
-  @Test(expected = ArithmeticException.class) public
-    void
-    multiplyIntOverflow2()
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public void multiplyIntOverflow2()
   {
     final int x = Integer.MIN_VALUE;
     final int y = -1;
     CheckedMath.multiply(x, y);
   }
 
-  @Test(expected = ArithmeticException.class) public
-    void
-    multiplyIntUnderflow0()
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public void multiplyIntUnderflow0()
   {
     final int x = Integer.MIN_VALUE;
     final int y = 2;
     CheckedMath.multiply(x, y);
   }
 
-  @Test(expected = ArithmeticException.class) public
-    void
-    multiplyIntUnderflow1()
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public void multiplyIntUnderflow1()
   {
     final int x = Integer.MIN_VALUE;
     final int y = -2;
     CheckedMath.multiply(x, y);
   }
 
-  @Test public void multiplyLongCorrect()
+  @SuppressWarnings("static-method") @Test public void multiplyLongCorrect()
   {
     for (long index = 0; index < 100; ++index) {
       final long x = CheckedMathTest.randomSmallLong();
@@ -327,7 +337,7 @@ public class CheckedMathTest
     }
   }
 
-  @Test public void multiplyOK0()
+  @SuppressWarnings("static-method") @Test public void multiplyOK0()
   {
     final long x = Long.MAX_VALUE;
     final long y = -1;
@@ -335,7 +345,7 @@ public class CheckedMathTest
     Assert.assertEquals(Long.MIN_VALUE + 1, z);
   }
 
-  @Test public void multiplyOK1()
+  @SuppressWarnings("static-method") @Test public void multiplyOK1()
   {
     final long x = Long.MIN_VALUE + 1;
     final long y = -1;
@@ -343,52 +353,54 @@ public class CheckedMathTest
     Assert.assertEquals(Long.MAX_VALUE, z);
   }
 
-  @Test(expected = ArithmeticException.class) public void multiplyOverflow0()
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public void multiplyOverflow0()
   {
     final long x = Long.MAX_VALUE;
     final long y = 2;
     CheckedMath.multiply(x, y);
   }
 
-  @Test(expected = ArithmeticException.class) public void multiplyOverflow1()
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public void multiplyOverflow1()
   {
     final long x = Long.MAX_VALUE;
     final long y = -2;
     CheckedMath.multiply(x, y);
   }
 
-  @Test(expected = ArithmeticException.class) public void multiplyOverflow2()
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public void multiplyOverflow2()
   {
     final long x = Long.MIN_VALUE;
     final long y = -1;
     CheckedMath.multiply(x, y);
   }
 
-  @Test(expected = ArithmeticException.class) public
-    void
-    multiplyUnderflow0()
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public void multiplyUnderflow0()
   {
     final long x = Long.MIN_VALUE;
     final long y = 2;
     CheckedMath.multiply(x, y);
   }
 
-  @Test(expected = ArithmeticException.class) public
-    void
-    multiplyUnderflow1()
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public void multiplyUnderflow1()
   {
     final long x = Long.MIN_VALUE;
     final long y = -2;
     CheckedMath.multiply(x, y);
   }
 
-  @Test(expected = ArithmeticException.class) public void negateIntBad()
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public void negateIntBad()
   {
     final int x = Integer.MIN_VALUE;
     CheckedMath.negate(x);
   }
 
-  @Test public void negateIntCorrect()
+  @SuppressWarnings("static-method") @Test public void negateIntCorrect()
   {
     for (int index = 0; index < 100; ++index) {
       final int x = CheckedMathTest.randomInt();
@@ -397,13 +409,14 @@ public class CheckedMathTest
     }
   }
 
-  @Test(expected = ArithmeticException.class) public void negateLongBad()
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public void negateLongBad()
   {
     final long x = Long.MIN_VALUE;
     CheckedMath.negate(x);
   }
 
-  @Test public void negateLongCorrect()
+  @SuppressWarnings("static-method") @Test public void negateLongCorrect()
   {
     for (long index = 0; index < 100; ++index) {
       final long x = CheckedMathTest.randomLong();
@@ -412,7 +425,7 @@ public class CheckedMathTest
     }
   }
 
-  @Test public void subtractIntCorrect()
+  @SuppressWarnings("static-method") @Test public void subtractIntCorrect()
   {
     for (int index = 0; index < 100; ++index) {
       final int x = CheckedMathTest.randomInt();
@@ -422,7 +435,8 @@ public class CheckedMathTest
     }
   }
 
-  @Test(expected = ArithmeticException.class) public
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public
     void
     subtractIntOverflowAlt()
   {
@@ -431,7 +445,8 @@ public class CheckedMathTest
     CheckedMath.subtract(x, y);
   }
 
-  @Test(expected = ArithmeticException.class) public
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public
     void
     subtractIntOverflowMin()
   {
@@ -440,7 +455,7 @@ public class CheckedMathTest
     CheckedMath.subtract(x, y);
   }
 
-  @Test public void subtractLongCorrect()
+  @SuppressWarnings("static-method") @Test public void subtractLongCorrect()
   {
     for (long index = 0; index < 100; ++index) {
       final long x = CheckedMathTest.randomLong();
@@ -450,7 +465,8 @@ public class CheckedMathTest
     }
   }
 
-  @Test(expected = ArithmeticException.class) public
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public
     void
     subtractLongOverflowAlt()
   {
@@ -459,7 +475,8 @@ public class CheckedMathTest
     CheckedMath.subtract(x, y);
   }
 
-  @Test(expected = ArithmeticException.class) public
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public
     void
     subtractLongOverflowMin()
   {

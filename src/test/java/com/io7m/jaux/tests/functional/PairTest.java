@@ -7,7 +7,7 @@ import com.io7m.jaux.functional.Pair;
 
 public class PairTest
 {
-  @Test public void testCorrect()
+  @SuppressWarnings("static-method") @Test public void testCorrect()
   {
     final Pair<Integer, String> p =
       new Pair<Integer, String>(Integer.valueOf(23), "hello");
@@ -15,7 +15,7 @@ public class PairTest
     Assert.assertEquals("hello", p.second);
   }
 
-  @Test public void testEquals()
+  @SuppressWarnings("static-method") @Test public void testEquals()
   {
     final Pair<Integer, Integer> p0 =
       new Pair<Integer, Integer>(Integer.valueOf(23), Integer.valueOf(23));
@@ -41,7 +41,7 @@ public class PairTest
     Assert.assertEquals(p0, p1);
   }
 
-  @Test public void testHashCode()
+  @SuppressWarnings("static-method") @Test public void testHashCode()
   {
     final Pair<Integer, Integer> p0 =
       new Pair<Integer, Integer>(Integer.valueOf(23), Integer.valueOf(23));
@@ -51,7 +51,7 @@ public class PairTest
     Assert.assertEquals(p0.hashCode(), p1.hashCode());
   }
 
-  @Test public void testStrings()
+  @SuppressWarnings("static-method") @Test public void testStrings()
   {
     final Pair<Integer, Integer> p0 =
       new Pair<Integer, Integer>(Integer.valueOf(23), Integer.valueOf(23));

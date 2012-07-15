@@ -9,7 +9,7 @@ import com.io7m.jaux.functional.PartialFunction;
 
 public class PartialFunctionTest
 {
-  @Test public void testCorrect()
+  @SuppressWarnings("static-method") @Test public void testCorrect()
     throws ConstraintError
   {
     final PartialFunction<Integer, Integer, ConstraintError> f =
@@ -24,7 +24,7 @@ public class PartialFunctionTest
     Assert.assertEquals(Integer.valueOf(96), f.call(Integer.valueOf(32)));
   }
 
-  @Test public void testRaise()
+  @SuppressWarnings("static-method") @Test public void testRaise()
   {
     try {
       final PartialFunction<Integer, Integer, ConstraintError> f =

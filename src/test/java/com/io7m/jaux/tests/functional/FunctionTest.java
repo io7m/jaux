@@ -8,7 +8,7 @@ import com.io7m.jaux.functional.Function;
 
 public class FunctionTest
 {
-  @Test public void testCorrect()
+  @SuppressWarnings("static-method") @Test public void testCorrect()
   {
     final Function<Integer, Integer> f = new Function<Integer, Integer>() {
       @Override public Integer call(

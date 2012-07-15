@@ -10,7 +10,7 @@ import com.io7m.jaux.functional.Indeterminate.Type;
 
 public class IndeterminateTest
 {
-  @Test public void testEquals()
+  @SuppressWarnings("static-method") @Test public void testEquals()
   {
     final Indeterminate.Success<Integer, String> s0 =
       new Indeterminate.Success<Integer, String>(Integer.valueOf(23));
@@ -50,7 +50,7 @@ public class IndeterminateTest
     Assert.assertFalse(f0.equals(s0));
   }
 
-  @Test public void testFailure()
+  @SuppressWarnings("static-method") @Test public void testFailure()
   {
     final Indeterminate<Integer, String> i =
       new Indeterminate.Failure<Integer, String>("failure");
@@ -63,7 +63,7 @@ public class IndeterminateTest
     Assert.assertEquals("failure", f.value);
   }
 
-  @Test public void testFailureString()
+  @SuppressWarnings("static-method") @Test public void testFailureString()
   {
     final Indeterminate.Failure<Integer, String> f0 =
       new Indeterminate.Failure<Integer, String>("failure");
@@ -82,7 +82,7 @@ public class IndeterminateTest
     Assert.assertFalse(f3.toString().equals(f0.toString()));
   }
 
-  @Test public void testHashCode()
+  @SuppressWarnings("static-method") @Test public void testHashCode()
   {
     final Indeterminate.Success<Integer, String> s0 =
       new Indeterminate.Success<Integer, String>(Integer.valueOf(23));
@@ -120,7 +120,9 @@ public class IndeterminateTest
     Assert.assertFalse(f0.hashCode() == s0.hashCode());
   }
 
-  @Test public void testIndeterminateString()
+  @SuppressWarnings("static-method") @Test public
+    void
+    testIndeterminateString()
   {
     final Indeterminate.Failure<Integer, String> i0 =
       new Indeterminate.Failure<Integer, String>("failure");
@@ -139,7 +141,7 @@ public class IndeterminateTest
     Assert.assertFalse(i3.toString().equals(i0.toString()));
   }
 
-  @Test public void testSuccess()
+  @SuppressWarnings("static-method") @Test public void testSuccess()
   {
     final Indeterminate<Integer, String> i =
       new Indeterminate.Success<Integer, String>(Integer.valueOf(100));
@@ -152,7 +154,7 @@ public class IndeterminateTest
     Assert.assertEquals(Integer.valueOf(100), s.value);
   }
 
-  @Test public void testSuccessString()
+  @SuppressWarnings("static-method") @Test public void testSuccessString()
   {
     final Indeterminate.Success<Integer, String> s0 =
       new Indeterminate.Success<Integer, String>(Integer.valueOf(23));

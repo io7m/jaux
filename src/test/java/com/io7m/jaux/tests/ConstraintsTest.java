@@ -31,8 +31,10 @@ public class ConstraintsTest
    * Range (int).
    */
 
-  @Test(expected = ConstraintError.class) public void testArbitraryFalse()
-    throws ConstraintError
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
+    void
+    testArbitraryFalse()
+      throws ConstraintError
   {
     try {
       Constraints.constrainArbitrary(false, "true");
@@ -42,8 +44,10 @@ public class ConstraintsTest
     }
   }
 
-  @Test(expected = ConstraintError.class) public void testArbitraryNull()
-    throws ConstraintError
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
+    void
+    testArbitraryNull()
+      throws ConstraintError
   {
     try {
       Constraints.constrainArbitrary(false, null);
@@ -53,14 +57,16 @@ public class ConstraintsTest
     }
   }
 
-  @Test public void testArbitraryTrue()
+  @SuppressWarnings("static-method") @Test public void testArbitraryTrue()
     throws ConstraintError
   {
     Constraints.constrainArbitrary(true, "true");
   }
 
-  @SuppressWarnings("boxing") @Test public void testLessThanDouble()
-    throws ConstraintError
+  @SuppressWarnings({ "boxing", "static-method" }) @Test public
+    void
+    testLessThanDouble()
+      throws ConstraintError
   {
     Assert.assertEquals(
       0.0,
@@ -68,8 +74,10 @@ public class ConstraintsTest
     Assert.assertEquals(0.0, Constraints.constrainLessThan(0.0, 10.0));
   }
 
-  @SuppressWarnings("boxing") @Test public void testLessThanFloat()
-    throws ConstraintError
+  @SuppressWarnings({ "boxing", "static-method" }) @Test public
+    void
+    testLessThanFloat()
+      throws ConstraintError
   {
     Assert.assertEquals(
       0.0f,
@@ -81,14 +89,14 @@ public class ConstraintsTest
    * Range (long).
    */
 
-  @Test public void testLessThanInt()
+  @SuppressWarnings("static-method") @Test public void testLessThanInt()
     throws ConstraintError
   {
     Assert.assertEquals(0, Constraints.constrainLessThan(0, 10, "something"));
     Assert.assertEquals(0, Constraints.constrainLessThan(0, 10));
   }
 
-  @Test public void testLessThanLong()
+  @SuppressWarnings("static-method") @Test public void testLessThanLong()
     throws ConstraintError
   {
     Assert.assertEquals(
@@ -97,8 +105,10 @@ public class ConstraintsTest
     Assert.assertEquals(0L, Constraints.constrainLessThan(0L, 10L));
   }
 
-  @Test(expected = ConstraintError.class) public void testLessThanOutDouble()
-    throws ConstraintError
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
+    void
+    testLessThanOutDouble()
+      throws ConstraintError
   {
     try {
       Constraints.constrainLessThan(10.0, 0.0, "something");
@@ -108,8 +118,10 @@ public class ConstraintsTest
     }
   }
 
-  @Test(expected = ConstraintError.class) public void testLessThanOutFloat()
-    throws ConstraintError
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
+    void
+    testLessThanOutFloat()
+      throws ConstraintError
   {
     try {
       Constraints.constrainLessThan(10.0f, 0.0f, "something");
@@ -119,8 +131,10 @@ public class ConstraintsTest
     }
   }
 
-  @Test(expected = ConstraintError.class) public void testLessThanOutInt()
-    throws ConstraintError
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
+    void
+    testLessThanOutInt()
+      throws ConstraintError
   {
     try {
       Constraints.constrainLessThan(10, 0, "something");
@@ -134,8 +148,10 @@ public class ConstraintsTest
    * Range (double).
    */
 
-  @Test(expected = ConstraintError.class) public void testLessThanOutLong()
-    throws ConstraintError
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
+    void
+    testLessThanOutLong()
+      throws ConstraintError
   {
     try {
       Constraints.constrainLessThan(10L, 0L, "something");
@@ -145,7 +161,7 @@ public class ConstraintsTest
     }
   }
 
-  @Test public void testMatch()
+  @SuppressWarnings("static-method") @Test public void testMatch()
     throws ConstraintError
   {
     final String x =
@@ -156,8 +172,10 @@ public class ConstraintsTest
     Assert.assertTrue(x.equals("abcd"));
   }
 
-  @Test(expected = ConstraintError.class) public void testMatchNull0()
-    throws ConstraintError
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
+    void
+    testMatchNull0()
+      throws ConstraintError
   {
     Constraints.constrainStringMatch(
       null,
@@ -165,14 +183,18 @@ public class ConstraintsTest
       "test_match");
   }
 
-  @Test(expected = ConstraintError.class) public void testMatchNull1()
-    throws ConstraintError
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
+    void
+    testMatchNull1()
+      throws ConstraintError
   {
     Constraints.constrainStringMatch("abcd", null, "test_match");
   }
 
-  @Test(expected = ConstraintError.class) public void testNoMatch()
-    throws ConstraintError
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
+    void
+    testNoMatch()
+      throws ConstraintError
   {
     Constraints.constrainStringMatch(
       "abcd",
@@ -184,15 +206,17 @@ public class ConstraintsTest
    * Range (float).
    */
 
-  @Test public void testNotNull()
+  @SuppressWarnings("static-method") @Test public void testNotNull()
     throws ConstraintError
   {
     final String value = Constraints.constrainNotNull("hello", "statement");
     Assert.assertTrue(value.equals("hello"));
   }
 
-  @Test(expected = ConstraintError.class) public void testNotNullFailure()
-    throws ConstraintError
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
+    void
+    testNotNullFailure()
+      throws ConstraintError
   {
     try {
       Constraints.constrainNotNull(null, "statement");
@@ -202,7 +226,7 @@ public class ConstraintsTest
     }
   }
 
-  @Test(expected = ConstraintError.class) public
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
     void
     testNotNullMessageNull()
       throws ConstraintError
@@ -215,13 +239,15 @@ public class ConstraintsTest
     }
   }
 
-  @Test(expected = ConstraintError.class) public void testRangeHighOut()
-    throws ConstraintError
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
+    void
+    testRangeHighOut()
+      throws ConstraintError
   {
     Constraints.constrainRange(11, 0, 10);
   }
 
-  @Test(expected = ConstraintError.class) public
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
     void
     testRangeHighOutDouble()
       throws ConstraintError
@@ -233,19 +259,23 @@ public class ConstraintsTest
    * Less than.
    */
 
-  @Test(expected = ConstraintError.class) public void testRangeHighOutFloat()
-    throws ConstraintError
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
+    void
+    testRangeHighOutFloat()
+      throws ConstraintError
   {
     Constraints.constrainRange(11.0f, 0.0f, 10.0f);
   }
 
-  @Test(expected = ConstraintError.class) public void testRangeHighOutLong()
-    throws ConstraintError
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
+    void
+    testRangeHighOutLong()
+      throws ConstraintError
   {
     Constraints.constrainRange(11L, 0L, 10L);
   }
 
-  @Test(expected = ConstraintError.class) public
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
     void
     testRangeHighOutMessage()
       throws ConstraintError
@@ -258,7 +288,7 @@ public class ConstraintsTest
     }
   }
 
-  @Test(expected = ConstraintError.class) public
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
     void
     testRangeHighOutMessageDouble()
       throws ConstraintError
@@ -271,7 +301,7 @@ public class ConstraintsTest
     }
   }
 
-  @Test(expected = ConstraintError.class) public
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
     void
     testRangeHighOutMessageFloat()
       throws ConstraintError
@@ -284,7 +314,7 @@ public class ConstraintsTest
     }
   }
 
-  @Test(expected = ConstraintError.class) public
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
     void
     testRangeHighOutMessageLong()
       throws ConstraintError
@@ -297,7 +327,7 @@ public class ConstraintsTest
     }
   }
 
-  @Test public void testRangeIn()
+  @SuppressWarnings("static-method") @Test public void testRangeIn()
     throws ConstraintError
   {
     for (int i = 0; i <= 10; ++i) {
@@ -305,7 +335,7 @@ public class ConstraintsTest
     }
   }
 
-  @Test public void testRangeInDouble()
+  @SuppressWarnings("static-method") @Test public void testRangeInDouble()
     throws ConstraintError
   {
     for (double i = 0.0; i <= 10.0; ++i) {
@@ -317,7 +347,7 @@ public class ConstraintsTest
    * Arbitrary.
    */
 
-  @Test public void testRangeInFloat()
+  @SuppressWarnings("static-method") @Test public void testRangeInFloat()
     throws ConstraintError
   {
     for (float i = 0.0f; i <= 10.0f; ++i) {
@@ -325,7 +355,7 @@ public class ConstraintsTest
     }
   }
 
-  @Test public void testRangeInLong()
+  @SuppressWarnings("static-method") @Test public void testRangeInLong()
     throws ConstraintError
   {
     for (long i = 0; i <= 10; ++i) {
@@ -333,8 +363,10 @@ public class ConstraintsTest
     }
   }
 
-  @Test(expected = ConstraintError.class) public void testRangeLowOut()
-    throws ConstraintError
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
+    void
+    testRangeLowOut()
+      throws ConstraintError
   {
     Constraints.constrainRange(-1, 0, 10);
   }
@@ -343,20 +375,26 @@ public class ConstraintsTest
    * Not null.
    */
 
-  @Test(expected = ConstraintError.class) public void testRangeLowOutDouble()
-    throws ConstraintError
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
+    void
+    testRangeLowOutDouble()
+      throws ConstraintError
   {
     Constraints.constrainRange(-1.0, 0.0, 10.0);
   }
 
-  @Test(expected = ConstraintError.class) public void testRangeLowOutFloat()
-    throws ConstraintError
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
+    void
+    testRangeLowOutFloat()
+      throws ConstraintError
   {
     Constraints.constrainRange(-1.0f, 0.0f, 10.0f);
   }
 
-  @Test(expected = ConstraintError.class) public void testRangeLowOutLong()
-    throws ConstraintError
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
+    void
+    testRangeLowOutLong()
+      throws ConstraintError
   {
     Constraints.constrainRange(-1L, 0L, 10L);
   }
@@ -365,7 +403,7 @@ public class ConstraintsTest
    * Matching.
    */
 
-  @Test(expected = ConstraintError.class) public
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
     void
     testRangeLowOutMessage()
       throws ConstraintError
@@ -378,7 +416,7 @@ public class ConstraintsTest
     }
   }
 
-  @Test(expected = ConstraintError.class) public
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
     void
     testRangeLowOutMessageDouble()
       throws ConstraintError
@@ -391,7 +429,7 @@ public class ConstraintsTest
     }
   }
 
-  @Test(expected = ConstraintError.class) public
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
     void
     testRangeLowOutMessageFloat()
       throws ConstraintError
@@ -404,7 +442,7 @@ public class ConstraintsTest
     }
   }
 
-  @Test(expected = ConstraintError.class) public
+  @SuppressWarnings("static-method") @Test(expected = ConstraintError.class) public
     void
     testRangeLowOutMessageLong()
       throws ConstraintError

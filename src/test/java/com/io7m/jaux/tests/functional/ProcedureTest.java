@@ -10,7 +10,7 @@ import com.io7m.jaux.functional.Procedure;
 
 public class ProcedureTest
 {
-  @Test public void testCorrect()
+  @SuppressWarnings("static-method") @Test public void testCorrect()
   {
     final AtomicInteger value = new AtomicInteger(0);
 

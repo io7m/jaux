@@ -10,7 +10,7 @@ import com.io7m.jaux.functional.Option.Type;
 
 public class OptionTest
 {
-  @Test public void testNone()
+  @SuppressWarnings("static-method") @Test public void testNone()
   {
     final Option<Integer> n = new Option.None<Integer>();
     Assert.assertEquals(Type.OPTION_NONE, n.type);
@@ -18,7 +18,7 @@ public class OptionTest
     Assert.assertFalse(n.isSome());
   }
 
-  @Test public void testNoneEquals()
+  @SuppressWarnings("static-method") @Test public void testNoneEquals()
   {
     final None<Integer> n0 = new None<Integer>();
     final None<Integer> n1 = new None<Integer>();
@@ -30,7 +30,7 @@ public class OptionTest
     Assert.assertFalse(n0.equals(null));
   }
 
-  @Test public void testNoneHashCode()
+  @SuppressWarnings("static-method") @Test public void testNoneHashCode()
   {
     final None<Integer> n0 = new None<Integer>();
     final None<Integer> n1 = new None<Integer>();
@@ -41,7 +41,7 @@ public class OptionTest
     Assert.assertFalse(n0.hashCode() == (Integer.valueOf(23).hashCode()));
   }
 
-  @Test public void testNoneStrings()
+  @SuppressWarnings("static-method") @Test public void testNoneStrings()
   {
     final None<Integer> n0 = new None<Integer>();
     final None<Integer> n1 = new None<Integer>();
@@ -53,7 +53,7 @@ public class OptionTest
     Assert.assertFalse(n0.toString().equals(null));
   }
 
-  @Test public void testSome()
+  @SuppressWarnings("static-method") @Test public void testSome()
   {
     final Option<Integer> n = new Option.Some<Integer>(Integer.valueOf(32));
     Assert.assertEquals(Type.OPTION_SOME, n.type);
@@ -64,7 +64,7 @@ public class OptionTest
     Assert.assertEquals(32, i.value.intValue());
   }
 
-  @Test public void testSomeEquals()
+  @SuppressWarnings("static-method") @Test public void testSomeEquals()
   {
     final Some<Integer> n0 = new Some<Integer>(Integer.valueOf(23));
     final Some<Integer> n1 = new Some<Integer>(Integer.valueOf(23));
@@ -81,7 +81,7 @@ public class OptionTest
     Assert.assertTrue(n2.equals(n3));
   }
 
-  @Test public void testSomeHashCode()
+  @SuppressWarnings("static-method") @Test public void testSomeHashCode()
   {
     final Some<Integer> n0 = new Some<Integer>(Integer.valueOf(23));
     final Some<Integer> n1 = new Some<Integer>(Integer.valueOf(23));
@@ -92,7 +92,7 @@ public class OptionTest
     Assert.assertFalse(n0.hashCode() == (Integer.valueOf(23).hashCode()));
   }
 
-  @Test public void testSomeStrings()
+  @SuppressWarnings("static-method") @Test public void testSomeStrings()
   {
     final Some<Integer> n0 = new Some<Integer>(Integer.valueOf(23));
     final Some<Integer> n1 = new Some<Integer>(Integer.valueOf(23));

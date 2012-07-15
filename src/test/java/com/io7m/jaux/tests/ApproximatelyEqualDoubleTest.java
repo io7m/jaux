@@ -23,57 +23,57 @@ import com.io7m.jaux.ApproximatelyEqualDouble;
 
 public class ApproximatelyEqualDoubleTest
 {
-  @Test public void testMaxMax()
+  @SuppressWarnings("static-method") @Test public void testMaxMax()
   {
     Assert.assertTrue(ApproximatelyEqualDouble.approximatelyEqual(
       Double.MAX_VALUE,
       Double.MAX_VALUE));
   }
 
-  @Test public void testMaxMin()
+  @SuppressWarnings("static-method") @Test public void testMaxMin()
   {
     Assert.assertFalse(ApproximatelyEqualDouble.approximatelyEqual(
       Double.MAX_VALUE,
       Double.MIN_VALUE));
   }
 
-  @Test public void testMinMax()
+  @SuppressWarnings("static-method") @Test public void testMinMax()
   {
     Assert.assertFalse(ApproximatelyEqualDouble.approximatelyEqual(
       Double.MIN_VALUE,
       Double.MAX_VALUE));
   }
 
-  @Test public void testMinMin()
+  @SuppressWarnings("static-method") @Test public void testMinMin()
   {
     Assert.assertTrue(ApproximatelyEqualDouble.approximatelyEqual(
       Double.MIN_VALUE,
       Double.MIN_VALUE));
   }
 
-  @Test public void testOne()
+  @SuppressWarnings("static-method") @Test public void testOne()
   {
     Assert.assertTrue(ApproximatelyEqualDouble.approximatelyEqual(1.0, 1.0));
   }
 
-  @Test public void testOneZero()
+  @SuppressWarnings("static-method") @Test public void testOneZero()
   {
     Assert.assertFalse(ApproximatelyEqualDouble.approximatelyEqual(1.0, 0.0));
   }
 
-  @Test public void testZero()
+  @SuppressWarnings("static-method") @Test public void testZero()
   {
     Assert.assertTrue(ApproximatelyEqualDouble.approximatelyEqual(0.0, 0.0));
   }
 
-  @Test public void testZeroEpsilon()
+  @SuppressWarnings("static-method") @Test public void testZeroEpsilon()
   {
     Assert.assertFalse(ApproximatelyEqualDouble.approximatelyEqual(
       0.0,
       ApproximatelyEqualDouble.DOUBLE_ERROR));
   }
 
-  @Test public void testZeroOne()
+  @SuppressWarnings("static-method") @Test public void testZeroOne()
   {
     Assert.assertFalse(ApproximatelyEqualDouble.approximatelyEqual(0.0, 1.0));
   }

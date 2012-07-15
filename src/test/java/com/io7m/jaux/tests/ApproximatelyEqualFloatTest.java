@@ -23,58 +23,58 @@ import com.io7m.jaux.ApproximatelyEqualFloat;
 
 public class ApproximatelyEqualFloatTest
 {
-  @Test public void min_max()
+  @SuppressWarnings("static-method") @Test public void min_max()
   {
     Assert.assertFalse(ApproximatelyEqualFloat.approximatelyEqual(
       Float.MIN_VALUE,
       Float.MAX_VALUE));
   }
 
-  @Test public void min_min()
+  @SuppressWarnings("static-method") @Test public void min_min()
   {
     Assert.assertTrue(ApproximatelyEqualFloat.approximatelyEqual(
       Float.MIN_VALUE,
       Float.MIN_VALUE));
   }
 
-  @Test public void one()
+  @SuppressWarnings("static-method") @Test public void one()
   {
     Assert.assertTrue(ApproximatelyEqualFloat.approximatelyEqual(1.0f, 1.0f));
   }
 
-  @Test public void one_zero()
+  @SuppressWarnings("static-method") @Test public void one_zero()
   {
     Assert
       .assertFalse(ApproximatelyEqualFloat.approximatelyEqual(1.0f, 0.0f));
   }
 
-  @Test public void testMaxMax()
+  @SuppressWarnings("static-method") @Test public void testMaxMax()
   {
     Assert.assertTrue(ApproximatelyEqualFloat.approximatelyEqual(
       Float.MAX_VALUE,
       Float.MAX_VALUE));
   }
 
-  @Test public void testMaxMin()
+  @SuppressWarnings("static-method") @Test public void testMaxMin()
   {
     Assert.assertFalse(ApproximatelyEqualFloat.approximatelyEqual(
       Float.MAX_VALUE,
       Float.MIN_VALUE));
   }
 
-  @Test public void zero()
+  @SuppressWarnings("static-method") @Test public void zero()
   {
     Assert.assertTrue(ApproximatelyEqualFloat.approximatelyEqual(0.0f, 0.0f));
   }
 
-  @Test public void zero_epsilon()
+  @SuppressWarnings("static-method") @Test public void zero_epsilon()
   {
     Assert.assertFalse(ApproximatelyEqualFloat.approximatelyEqual(
       0.0f,
       ApproximatelyEqualFloat.FLOAT_ERROR));
   }
 
-  @Test public void zero_one()
+  @SuppressWarnings("static-method") @Test public void zero_one()
   {
     Assert
       .assertFalse(ApproximatelyEqualFloat.approximatelyEqual(0.0f, 1.0f));
