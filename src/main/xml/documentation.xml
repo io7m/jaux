@@ -54,6 +54,7 @@
     </s:section>
 
     <s:section>
+      <s:section-title>Installation</s:section-title>
       <s:subsection>
         <s:subsection-title>Source compilation</s:subsection-title>
         <s:paragraph>
