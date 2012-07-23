@@ -43,7 +43,6 @@
     </site>
   </distributionManagement>
 
-  <!-- Require at least this version of Maven -->
   <prerequisites>
     <maven>2.2.1</maven>
   </prerequisites>
