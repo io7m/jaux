@@ -236,7 +236,7 @@
           <transformation>
             <stylesheetFile>src/main/xsl/structural-1_0_0-standalone-x20.xsl</stylesheetFile>
             <documentFile>src/main/xml/documentation.xml</documentFile>
-            <outputDirectory>file://${project.build.directory}/xhtml</outputDirectory>
+            <outputDirectory>${project.build.directory}/xhtml</outputDirectory>
             <outputFile>out.txt</outputFile>
             <stylesheetParameters>
               <property>
