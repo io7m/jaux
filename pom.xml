@@ -224,7 +224,7 @@
       <plugin>
         <groupId>com.io7m.saxon-plugin</groupId>
         <artifactId>io7m-saxon-plugin</artifactId>
-        <version>1.0.0</version>
+        <version>1.1.0</version>
         <executions>
           <execution>
             <goals>
