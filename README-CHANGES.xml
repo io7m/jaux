@@ -3,8 +3,13 @@
   <c:project>io7m-jaux</c:project>
 
   <c:release ticket-system="com.io7m.fossil.jaux">
-    <c:date>2012-07-27</c:date>
-    <c:version>2.2.1</c:version>
+    <c:date>2012-10-21</c:date>
+    <c:version>2.3.0</c:version>
+    <c:item>
+      <c:date>2012-10-21</c:date>
+      <c:type-code-new/>
+      <c:summary>Added UnreachableCodeException and UnimplementedCodeException</c:summary>
+    </c:item>
     <c:item>
       <c:date>2012-10-21</c:date>
       <c:type-code-fix/>
