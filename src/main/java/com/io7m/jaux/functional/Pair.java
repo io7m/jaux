@@ -1,10 +1,12 @@
 package com.io7m.jaux.functional;
 
+import javax.annotation.concurrent.Immutable;
+
 /**
  * Immutable generic pair type.
  */
 
-public final class Pair<A, B>
+@Immutable public final class Pair<A, B>
 {
   public final A first;
   public final B second;

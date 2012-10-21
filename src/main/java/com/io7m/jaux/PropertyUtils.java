@@ -21,12 +21,13 @@ import java.io.IOException;
 import java.util.Properties;
 
 import javax.annotation.Nonnull;
+import javax.annotation.concurrent.ThreadSafe;
 
 import com.io7m.jaux.Constraints.ConstraintError;
 
 /** Type-safe interface to Properties. */
 
-public final class PropertyUtils
+@ThreadSafe public final class PropertyUtils
 {
   /**
    * Exception raised a value of an incorrect type was found in the given

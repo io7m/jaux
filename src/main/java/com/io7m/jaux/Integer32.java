@@ -17,10 +17,11 @@
 package com.io7m.jaux;
 
 import javax.annotation.Nonnull;
+import javax.annotation.concurrent.ThreadSafe;
 
 /** 32-bit integer packing/unpacking functions. */
 
-public final class Integer32
+@ThreadSafe public final class Integer32
 {
   public static @Nonnull byte[] packBigEndian(
     final int i)

@@ -16,12 +16,14 @@
 
 package com.io7m.jaux;
 
+import javax.annotation.concurrent.ThreadSafe;
+
 /**
  * Checked arithmetic operations: All operations raise
  * {@link ArithmeticException} on underflow or overflow.
  */
 
-public final class CheckedMath
+@ThreadSafe public final class CheckedMath
 {
   /**
    * Return the absolute value of an integer.

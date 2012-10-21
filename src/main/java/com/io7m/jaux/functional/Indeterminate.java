@@ -17,6 +17,7 @@
 package com.io7m.jaux.functional;
 
 import javax.annotation.Nonnull;
+import javax.annotation.concurrent.Immutable;
 
 /**
  * Type denoting the result of a computation that might fail. A value
@@ -39,7 +40,7 @@ import javax.annotation.Nonnull;
  * </p>
  */
 
-public class Indeterminate<S, F>
+@Immutable public class Indeterminate<S, F>
 {
   /**
    * Type enclosing failure.

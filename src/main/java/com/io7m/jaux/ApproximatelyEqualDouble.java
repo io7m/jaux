@@ -22,11 +22,13 @@
 
 package com.io7m.jaux;
 
+import javax.annotation.concurrent.ThreadSafe;
+
 /**
  * Approximate equality for double-precision floating point values.
  */
 
-public final class ApproximatelyEqualDouble
+@ThreadSafe public final class ApproximatelyEqualDouble
 {
   /**
    * An error epsilon value appropriate to double precision floating point

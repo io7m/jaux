@@ -16,11 +16,13 @@
 
 package com.io7m.jaux.functional;
 
+import javax.annotation.concurrent.Immutable;
+
 /**
  * The single-valued unit type.
  */
 
-public final class Unit
+@Immutable public final class Unit
 {
   public static final int  UNIT_HASH_CODE = 0xFACECAFE;
   public static final Unit value          = new Unit();

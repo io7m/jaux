@@ -21,6 +21,7 @@ import java.util.regex.Pattern;
 
 import javax.annotation.CheckForNull;
 import javax.annotation.Nonnull;
+import javax.annotation.concurrent.ThreadSafe;
 
 /**
  * <p>
@@ -43,7 +44,7 @@ import javax.annotation.Nonnull;
  * </p>
  */
 
-public final class Constraints
+@ThreadSafe public final class Constraints
 {
   /**
    * Exception type raised on constraint violation.

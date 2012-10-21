@@ -17,6 +17,7 @@
 package com.io7m.jaux.functional;
 
 import javax.annotation.Nonnull;
+import javax.annotation.concurrent.Immutable;
 
 /**
  * Type denoting a computation that may or may not return a value. A value
@@ -38,7 +39,7 @@ import javax.annotation.Nonnull;
  * </p>
  */
 
-public class Option<A>
+@Immutable public class Option<A>
 {
   /**
    * Type enclosing no value.
