@@ -6,12 +6,17 @@
     <c:date>2012-07-27</c:date>
     <c:version>2.2.1</c:version>
     <c:item>
+      <c:date>2012-10-21</c:date>
+      <c:type-code-fix/>
+      <c:summary>Add more JSR 305 annotations</c:summary>
+    </c:item>
+    <c:item>
       <c:date>2012-07-27</c:date>
       <c:type-code-fix/>
       <c:summary>Update saxon-plugin to 1.1.0 to correct documentation builds on Windows</c:summary>
     </c:item>
   </c:release>
- 
+
   <c:release ticket-system="com.io7m.fossil.jaux">
     <c:date>2012-07-23</c:date>
     <c:version>2.2.0</c:version>
@@ -21,7 +26,7 @@
       <c:summary>Update all POM plugins to their latest versions</c:summary>
     </c:item>
   </c:release>
- 
+
   <c:release ticket-system="com.io7m.fossil.jaux">
     <c:date>2012-07-23</c:date>
     <c:version>2.1.2</c:version>
@@ -41,7 +46,7 @@
       <c:summary>Add missing documentation CSS</c:summary>
     </c:item>
   </c:release>
- 
+
   <c:release ticket-system="com.io7m.fossil.jaux">
     <c:date>2012-07-14</c:date>
     <c:version>2.1.1</c:version>
@@ -51,7 +56,7 @@
       <c:summary>Produce all documentation with Maven</c:summary>
     </c:item>
   </c:release>
- 
+
   <c:release ticket-system="com.io7m.fossil.jaux">
     <c:date>2012-07-11</c:date>
     <c:version>2.1.0</c:version>
@@ -66,7 +71,7 @@
       <c:summary>Add PartialFunction</c:summary>
     </c:item>
   </c:release>
- 
+
   <c:release ticket-system="com.io7m.fossil.jaux">
     <c:date>2012-06-19</c:date>
     <c:version>2.0.0</c:version>
