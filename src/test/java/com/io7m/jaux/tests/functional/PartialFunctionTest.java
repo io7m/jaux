@@ -30,7 +30,7 @@ public class PartialFunctionTest
       final PartialFunction<Integer, Integer, ConstraintError> f =
         new PartialFunction<Integer, Integer, ConstraintError>() {
           @Override public Integer call(
-            final Integer x)
+            @SuppressWarnings("unused") final Integer x)
             throws ConstraintError
           {
             throw new ConstraintError("test");
