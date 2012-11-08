@@ -6,6 +6,11 @@
     <c:date>2012-10-21</c:date>
     <c:version>2.3.0</c:version>
     <c:item>
+      <c:date>2012-11-08</c:date>
+      <c:type-code-fix/>
+      <c:summary>Use latest versions of all Maven plugins. Use JSR 305 2.0.1</c:summary>
+    </c:item>
+    <c:item>
       <c:date>2012-10-21</c:date>
       <c:type-code-new/>
       <c:summary>Added UnreachableCodeException and UnimplementedCodeException</c:summary>
