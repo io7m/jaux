@@ -21,6 +21,7 @@
         <li>Constraints class for "assertions that cannot be turned off".</li>
         <li>CheckedMath class for machine integer arithmetic that does not silently overflow.</li>
         <li>"Functional" programming features - Function class, Unit, Option types, etc.</li>
+        <li>Convenient unchecked exception types for marking unreachable and unimplemented code.</li>
         <li>Type-safe interface to Java properties.</li>
         <li>Fully documented (Javadoc).</li>
         <li>100% automated unit test coverage.</li>
