@@ -169,6 +169,16 @@
               <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.3.0-sources.jar">io7m-jaux-2.3.0-sources.jar</a>
             </td>
           </tr>
+          <tr class="page_table_row">
+            <td class="page_table_column">2012-11-08</td>
+            <td class="page_table_column">80413</td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.3.0.zip.asc">asc</a>
+            </td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.3.0.zip">io7m-jaux-2.3.0.zip</a>
+            </td>
+          </tr>
         </tbody>
       </table>
     </section>
