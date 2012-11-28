@@ -13,6 +13,7 @@ import com.io7m.jaux.Constraints.ConstraintError;
 {
   private final long lower;
   private final long upper;
+  private final long interval;
 
   /**
    * Construct an inclusive range. The constructor enforces the invariant
@@ -34,6 +35,7 @@ import com.io7m.jaux.Constraints.ConstraintError;
     Constraints.constrainArbitrary(lower <= upper, "First <= Last");
     this.lower = lower;
     this.upper = upper;
+    this.interval = (this.upper - this.lower) + 1;
   }
 
   @Override public boolean equals(
@@ -66,7 +68,7 @@ import com.io7m.jaux.Constraints.ConstraintError;
 
   public long getInterval()
   {
-    return (this.upper - this.lower) + 1;
+    return this.interval;
   }
 
   /**
