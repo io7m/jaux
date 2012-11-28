@@ -1,5 +1,6 @@
 package com.io7m.jaux;
 
+import javax.annotation.Nonnull;
 import javax.annotation.concurrent.Immutable;
 
 import com.io7m.jaux.Constraints.ConstraintError;
@@ -93,6 +94,23 @@ import com.io7m.jaux.Constraints.ConstraintError;
     result = (prime * result) + (int) (this.lower ^ (this.lower >>> 32));
     result = (prime * result) + (int) (this.upper ^ (this.upper >>> 32));
     return result;
+  }
+
+  /**
+   * Return <code>true</code> iff
+   * <code>this.getLower() >= other.getLower() && this.getUpper() <= other.getUpper()</code>
+   * .
+   * 
+   * @throws ConstraintError
+   *           Iff <code>other == null</code>.
+   */
+
+  public boolean isIncludedIn(
+    final @Nonnull RangeInclusive other)
+    throws ConstraintError
+  {
+    Constraints.constrainNotNull(other, "Other range");
+    return (this.lower >= other.lower) && (this.upper <= other.upper);
   }
 
   @Override public String toString()

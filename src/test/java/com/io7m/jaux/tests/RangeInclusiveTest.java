@@ -67,6 +67,21 @@ public class RangeInclusiveTest
     Assert.assertEquals(100, ri1.getInterval());
   }
 
+  @SuppressWarnings("static-method") @Test public void testRangeIncluded()
+    throws ConstraintError
+  {
+    final RangeInclusive ri0 = new RangeInclusive(0, 9);
+    final RangeInclusive ri1 = new RangeInclusive(0, 7);
+    final RangeInclusive ri2 = new RangeInclusive(2, 9);
+
+    Assert.assertTrue(ri1.isIncludedIn(ri0));
+    Assert.assertTrue(ri2.isIncludedIn(ri0));
+    Assert.assertTrue(ri0.isIncludedIn(ri0));
+
+    Assert.assertFalse(ri0.isIncludedIn(ri1));
+    Assert.assertFalse(ri0.isIncludedIn(ri2));
+  }
+
   @SuppressWarnings("static-method") @Test public void testToString()
     throws ConstraintError
   {
