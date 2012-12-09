@@ -24,6 +24,7 @@ import javax.annotation.concurrent.Immutable;
 
 @Immutable public final class Unit
 {
+  public static final Unit UNIT           = new Unit();
   public static final int  UNIT_HASH_CODE = 0xFACECAFE;
   public static final Unit value          = new Unit();
 
