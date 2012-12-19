@@ -7,6 +7,8 @@ import com.io7m.jaux.Constraints.ConstraintError;
 
 /**
  * Immutable type representing an inclusive range.
+ * 
+ * @since 2.4.0
  */
 
 @Immutable public final class RangeInclusive
