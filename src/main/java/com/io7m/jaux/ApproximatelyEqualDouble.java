@@ -28,7 +28,7 @@ import javax.annotation.concurrent.ThreadSafe;
  * Approximate equality for double-precision floating point values.
  */
 
-@ThreadSafe public final class ApproximatelyEqualDouble
+@ThreadSafe @Deprecated public final class ApproximatelyEqualDouble
 {
   /**
    * An error epsilon value appropriate to double precision floating point
@@ -41,7 +41,7 @@ import javax.annotation.concurrent.ThreadSafe;
    * @return <code>approximatelyEqualExplicit(x, y, DOUBLE_ERROR)</code>
    */
 
-  public static boolean approximatelyEqual(
+  @Deprecated public static boolean approximatelyEqual(
     final double x,
     final double y)
   {
@@ -58,7 +58,7 @@ import javax.annotation.concurrent.ThreadSafe;
    *         , within the specified degree of error <code>e</code>.
    */
 
-  public static boolean approximatelyEqualExplicit(
+  @Deprecated public static boolean approximatelyEqualExplicit(
     final double x,
     final double y,
     final double e)
