@@ -14,3 +14,7 @@
 2012-11-08:io7m-jaux-2.3.0.jar:27892
 2012-11-08:io7m-jaux-2.3.0-sources.jar:20186
 2012-11-08:io7m-jaux-2.3.0.zip:80413
+2013-01-15:io7m-jaux-2.4.0-javadoc.jar:169787
+2013-01-15:io7m-jaux-2.4.0-sources.jar:23300
+2013-01-15:io7m-jaux-2.4.0.jar:32668
+2013-01-15:io7m-jaux-2.4.0-documentation.zip:188660
