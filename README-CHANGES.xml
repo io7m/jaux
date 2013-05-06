@@ -3,6 +3,16 @@
   <c:project>io7m-jaux</c:project>
 
   <c:release ticket-system="com.io7m.fossil.jaux">
+    <c:date>2013-05-04</c:date>
+    <c:version>2.5.0</c:version>
+    <c:item>
+      <c:date>2013-05-04</c:date>
+      <c:type-code-new/>
+      <c:summary>Produce a jar file for unit tests</c:summary>
+    </c:item>
+  </c:release>
+
+  <c:release ticket-system="com.io7m.fossil.jaux">
     <c:date>2012-12-18</c:date>
     <c:version>2.4.0</c:version>
     <c:item>

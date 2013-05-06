@@ -16,7 +16,10 @@
 
 package com.io7m.jaux.tests;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Properties;
 
 import javax.annotation.Nonnull;
@@ -344,9 +347,14 @@ public class PropertyUtilsTest
       ValueNotFound,
       ValueIncorrectType
   {
+    final File temp = File.createTempFile("PropertyUtilsTest", ".properties");
+    final PrintWriter stream = new PrintWriter(new FileOutputStream(temp));
+    stream.write("integer = 23");
+    stream.flush();
+    stream.close();
+
     final @Nonnull Properties properties =
-      PropertyUtils
-        .loadFromFile("src/test/resources/PropertyUtilsTest.properties");
+      PropertyUtils.loadFromFile(temp.getCanonicalPath());
     Assert.assertTrue(PropertyUtils.getInteger(properties, "integer") == 23);
   }
 
