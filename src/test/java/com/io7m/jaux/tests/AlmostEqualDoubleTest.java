@@ -33,6 +33,28 @@ public class AlmostEqualDoubleTest
     }
   }
 
+  @SuppressWarnings("static-method") @Test public void testInfinities()
+  {
+    final ContextRelative cr = new AlmostEqualDouble.ContextRelative();
+
+    Assert.assertTrue(AlmostEqualDouble.almostEqual(
+      cr,
+      Double.POSITIVE_INFINITY,
+      Double.POSITIVE_INFINITY));
+    Assert.assertFalse(AlmostEqualDouble.almostEqual(
+      cr,
+      Double.POSITIVE_INFINITY,
+      0.0f));
+    Assert.assertTrue(AlmostEqualDouble.almostEqual(
+      cr,
+      Double.NEGATIVE_INFINITY,
+      Double.NEGATIVE_INFINITY));
+    Assert.assertFalse(AlmostEqualDouble.almostEqual(
+      cr,
+      Double.NEGATIVE_INFINITY,
+      0.0f));
+  }
+
   @SuppressWarnings("static-method") @Test public void testMaxMax()
   {
     final ContextRelative cr = new AlmostEqualDouble.ContextRelative();

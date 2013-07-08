@@ -7,6 +7,7 @@ import javax.annotation.Nonnull;
  * Better floating point comparisons.
  * <p>
  * <p>
+ * 
  * See <a href=
  * "http://randomascii.wordpress.com/2012/02/25/comparing-floating-point-numbers-2012-edition"
  * >Comparing floating point numbers 2012</a>.
@@ -91,6 +92,17 @@ public final class AlmostEqualDouble
     final double x,
     final double y)
   {
+    if (x == Double.POSITIVE_INFINITY) {
+      if (y == Double.POSITIVE_INFINITY) {
+        return true;
+      }
+    }
+    if (x == Double.NEGATIVE_INFINITY) {
+      if (y == Double.NEGATIVE_INFINITY) {
+        return true;
+      }
+    }
+
     final double diff = Math.abs(x - y);
     if (diff <= context.getMaxAbsoluteDifference()) {
       return true;

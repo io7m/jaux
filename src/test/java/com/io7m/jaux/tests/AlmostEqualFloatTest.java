@@ -33,6 +33,28 @@ public class AlmostEqualFloatTest
     }
   }
 
+  @SuppressWarnings("static-method") @Test public void testInfinities()
+  {
+    final ContextRelative cr = new AlmostEqualFloat.ContextRelative();
+
+    Assert.assertTrue(AlmostEqualFloat.almostEqual(
+      cr,
+      Float.POSITIVE_INFINITY,
+      Float.POSITIVE_INFINITY));
+    Assert.assertFalse(AlmostEqualFloat.almostEqual(
+      cr,
+      Float.POSITIVE_INFINITY,
+      0.0f));
+    Assert.assertTrue(AlmostEqualFloat.almostEqual(
+      cr,
+      Float.NEGATIVE_INFINITY,
+      Float.NEGATIVE_INFINITY));
+    Assert.assertFalse(AlmostEqualFloat.almostEqual(
+      cr,
+      Float.NEGATIVE_INFINITY,
+      0.0f));
+  }
+
   @SuppressWarnings("static-method") @Test public void testMaxMax()
   {
     final ContextRelative cr = new AlmostEqualFloat.ContextRelative();

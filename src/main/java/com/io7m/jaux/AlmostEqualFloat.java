@@ -91,6 +91,17 @@ public final class AlmostEqualFloat
     final float x,
     final float y)
   {
+    if (x == Float.POSITIVE_INFINITY) {
+      if (y == Float.POSITIVE_INFINITY) {
+        return true;
+      }
+    }
+    if (x == Float.NEGATIVE_INFINITY) {
+      if (y == Float.NEGATIVE_INFINITY) {
+        return true;
+      }
+    }
+
     final float diff = Math.abs(x - y);
     if (diff <= context.getMaxAbsoluteDifference()) {
       return true;
