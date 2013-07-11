@@ -18,3 +18,9 @@
 2013-01-15:io7m-jaux-2.4.0-sources.jar:23300
 2013-01-15:io7m-jaux-2.4.0.jar:32668
 2013-01-15:io7m-jaux-2.4.0-documentation.zip:188660
+2013-07-11:io7m-jaux-2.5.0-tests.jar:33576
+2013-07-11:io7m-jaux-2.5.0.jar:32748
+2013-07-11:io7m-jaux-2.5.0-javadoc.jar:179410
+2013-07-11:io7m-jaux-2.5.0-sources.jar:25467
+2013-07-11:io7m-jaux-2.5.0.zip:96498
+2013-07-11:io7m-jaux-2.5.0-documentation.zip:198530

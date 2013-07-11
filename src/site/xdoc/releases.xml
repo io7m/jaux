@@ -219,6 +219,66 @@
               <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.4.0-documentation.zip">io7m-jaux-2.4.0-documentation.zip</a>
             </td>
           </tr>
+          <tr class="page_table_row">
+            <td class="page_table_column">2013-07-11</td>
+            <td class="page_table_column">33576</td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.5.0-tests.jar.asc">asc</a>
+            </td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.5.0-tests.jar">io7m-jaux-2.5.0-tests.jar</a>
+            </td>
+          </tr>
+          <tr class="page_table_row">
+            <td class="page_table_column">2013-07-11</td>
+            <td class="page_table_column">32748</td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.5.0.jar.asc">asc</a>
+            </td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.5.0.jar">io7m-jaux-2.5.0.jar</a>
+            </td>
+          </tr>
+          <tr class="page_table_row">
+            <td class="page_table_column">2013-07-11</td>
+            <td class="page_table_column">179410</td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.5.0-javadoc.jar.asc">asc</a>
+            </td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.5.0-javadoc.jar">io7m-jaux-2.5.0-javadoc.jar</a>
+            </td>
+          </tr>
+          <tr class="page_table_row">
+            <td class="page_table_column">2013-07-11</td>
+            <td class="page_table_column">25467</td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.5.0-sources.jar.asc">asc</a>
+            </td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.5.0-sources.jar">io7m-jaux-2.5.0-sources.jar</a>
+            </td>
+          </tr>
+          <tr class="page_table_row">
+            <td class="page_table_column">2013-07-11</td>
+            <td class="page_table_column">96498</td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.5.0.zip.asc">asc</a>
+            </td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.5.0.zip">io7m-jaux-2.5.0.zip</a>
+            </td>
+          </tr>
+          <tr class="page_table_row">
+            <td class="page_table_column">2013-07-11</td>
+            <td class="page_table_column">198530</td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.5.0-documentation.zip.asc">asc</a>
+            </td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.5.0-documentation.zip">io7m-jaux-2.5.0-documentation.zip</a>
+            </td>
+          </tr>
         </tbody>
       </table>
     </section>
@@ -300,13 +360,39 @@
               <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.4.0-documentation.zip">io7m-jaux-2.4.0-documentation.zip</a>
             </td>
           </tr>
+          <tr class="page_table_row">
+            <td class="page_table_column">2013-07-11</td>
+            <td class="page_table_column">198530</td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.5.0-documentation.zip.asc">asc</a>
+            </td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://io7m.com/software/jaux/doc/2.5.0/d1.xhtml">io7m-jaux 2.5.0</a>
+            </td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.5.0-documentation.zip">io7m-jaux-2.5.0-documentation.zip</a>
+            </td>
+          </tr>
         </tbody>
       </table>
     </section>
 
     <section name="Changes">
-<table xmlns="http://www.w3.org/1999/xhtml" class="changelog page_table"
+<table xmlns="http://www.w3.org/1999/xhtml"
+       class="changelog page_table"
        summary="Changes">
+   <tr class="page_table_row">
+      <td class="page_table_column">2013-07-08</td>
+      <td class="page_table_column">Release: io7m-jaux 2.5.0</td>
+   </tr>
+   <tr class="page_table_row">
+      <td class="page_table_column">2013-07-08</td>
+      <td class="page_table_column">Code fix: Add explicit checks to AlmostEqualFloat and AlmostEqualDouble to give better behaviour when infinities are involved</td>
+   </tr>
+   <tr class="page_table_row">
+      <td class="page_table_column">2013-05-04</td>
+      <td class="page_table_column">Code new: Produce a jar file for unit tests</td>
+   </tr>
    <tr class="page_table_row">
       <td class="page_table_column">2012-12-18</td>
       <td class="page_table_column">Release: io7m-jaux 2.4.0</td>
@@ -412,6 +498,7 @@
       <td class="page_table_column">Code new: Initial version</td>
    </tr>
 </table>
+
     </section>
 
   </body>
