@@ -1,5 +1,5 @@
 /*
- * Copyright © 2012 http://io7m.com
+ * Copyright © 2013 <code@io7m.com> http://io7m.com
  * 
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -20,18 +20,18 @@ import javax.annotation.Nonnull;
 import javax.annotation.concurrent.Immutable;
 
 /**
+ * <p>
  * Type denoting the result of a computation that might fail. A value
  * <code>i</code> of type <code>Indeterminate<S, F></code> contains a value of
  * type <code>S</code> iff the computation succeeded, or a value of type
  * <code>F</code> iff the computation failed.
- * 
+ * </p>
  * <p>
  * The normal way to use <code>i</code> is to match (switch) on
  * <code>i.type</code> and then cast <code>i</code> to
  * <code>Success<S, F></code> or <code>Failure<S, F></code> based on whether
  * <code>i.type == SUCCESS</code> or <code>i.type == FAILURE</code>.
  * </p>
- * 
  * <p>
  * The constructor of <code>Indeterminate<S, F></code> is private in order to
  * statically guarantee that the only two possible subtypes of

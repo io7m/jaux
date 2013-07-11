@@ -1,5 +1,5 @@
 /*
- * Copyright © 2012 http://io7m.com
+ * Copyright © 2013 <code@io7m.com> http://io7m.com
  * 
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -17,13 +17,16 @@
 package com.io7m.jaux;
 
 /**
+ * <p>
  * The type of exceptions thrown upon reaching code that was expected to be
  * unreachable.
- * 
+ * </p>
+ * <p>
  * As correctly written programs should never raise exceptions of this type,
  * their use in code is intended to document the fact that a statement is
  * expected to be unreachable (but that the compiler cannot prove is actually
  * unreachable).
+ * </p>
  */
 
 public final class UnreachableCodeException extends RuntimeException

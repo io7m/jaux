@@ -1,5 +1,5 @@
 /*
- * Copyright © 2012 http://io7m.com
+ * Copyright © 2013 <code@io7m.com> http://io7m.com
  * 
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -20,18 +20,18 @@ import javax.annotation.Nonnull;
 import javax.annotation.concurrent.Immutable;
 
 /**
+ * <p>
  * Type denoting a computation that may or may not return a value. A value
  * <code>o</code> of type <code>Option<A></code> contains a value of type
  * <code>A</code> iff the computation returned a value, or no value iff the
  * computation did not return a value.
- * 
+ * </p>
  * <p>
  * The normal way to use <code>o</code> is to match (switch) on
  * <code>i.type</code> and then cast <code>o</code> to <code>Some<A></code> or
  * <code>None<A></code> based on whether <code>o.type == OPTION_SOME</code> or
  * <code>o.type == OPTION_NONE</code>.
  * </p>
- * 
  * <p>
  * The constructor of <code>Option<A></code> is private in order to statically
  * guarantee that the only two possible subtypes of <code>Option<A></code> are
