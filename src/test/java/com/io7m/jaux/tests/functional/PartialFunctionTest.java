@@ -1,7 +1,6 @@
 package com.io7m.jaux.tests.functional;
 
-import junit.framework.Assert;
-
+import org.junit.Assert;
 import org.junit.Test;
 
 import com.io7m.jaux.Constraints.ConstraintError;
@@ -30,7 +29,7 @@ public class PartialFunctionTest
       final PartialFunction<Integer, Integer, ConstraintError> f =
         new PartialFunction<Integer, Integer, ConstraintError>() {
           @Override public Integer call(
-            @SuppressWarnings("unused") final Integer x)
+            final Integer x)
             throws ConstraintError
           {
             throw new ConstraintError("test");

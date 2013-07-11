@@ -18,8 +18,7 @@ package com.io7m.jaux.tests;
 
 import java.util.regex.Pattern;
 
-import junit.framework.Assert;
-
+import org.junit.Assert;
 import org.junit.Test;
 
 import com.io7m.jaux.Constraints;
@@ -63,26 +62,29 @@ public class ConstraintsTest
     Constraints.constrainArbitrary(true, "true");
   }
 
-  @SuppressWarnings({ "boxing", "static-method" }) @Test public
+  @SuppressWarnings({ "static-method" }) @Test public
     void
     testLessThanDouble()
       throws ConstraintError
   {
     Assert.assertEquals(
       0.0,
-      Constraints.constrainLessThan(0.0, 10.0, "something"));
-    Assert.assertEquals(0.0, Constraints.constrainLessThan(0.0, 10.0));
+      Constraints.constrainLessThan(0.0, 10.0, "something"),
+      0.0);
+    Assert.assertEquals(0.0, Constraints.constrainLessThan(0.0, 10.0), 0.0);
   }
 
-  @SuppressWarnings({ "boxing", "static-method" }) @Test public
+  @SuppressWarnings({ "static-method" }) @Test public
     void
     testLessThanFloat()
       throws ConstraintError
   {
     Assert.assertEquals(
       0.0f,
-      Constraints.constrainLessThan(0.0f, 10.0f, "something"));
-    Assert.assertEquals(0.0f, Constraints.constrainLessThan(0.0f, 10.0f));
+      Constraints.constrainLessThan(0.0f, 10.0f, "something"),
+      0.0);
+    Assert
+      .assertEquals(0.0f, Constraints.constrainLessThan(0.0f, 10.0f), 0.0);
   }
 
   /*
