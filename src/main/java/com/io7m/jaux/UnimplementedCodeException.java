@@ -30,6 +30,10 @@ public final class UnimplementedCodeException extends RuntimeException
     super("Reached unimplemented code: report this bug");
   }
 
+  /**
+   * @since 2.6.0
+   */
+
   public UnimplementedCodeException(
     final Throwable x)
   {

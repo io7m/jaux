@@ -38,6 +38,10 @@ public final class UnreachableCodeException extends RuntimeException
     super("Unexpectedly reached unreachable code: report this bug");
   }
 
+  /**
+   * @since 2.6.0
+   */
+
   public UnreachableCodeException(
     final Throwable x)
   {

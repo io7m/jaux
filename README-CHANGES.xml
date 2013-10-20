@@ -3,6 +3,16 @@
   <c:project>io7m-jaux</c:project>
 
   <c:release ticket-system="com.io7m.fossil.jaux">
+    <c:date>2013-10-20</c:date>
+    <c:version>2.6.0</c:version>
+    <c:item>
+      <c:date>2013-10-20</c:date>
+      <c:type-code-new/>
+      <c:summary>Add cause constructors to Unimplemented and Unreachable exceptions</c:summary>
+    </c:item>
+  </c:release>
+
+  <c:release ticket-system="com.io7m.fossil.jaux">
     <c:date>2013-07-08</c:date>
     <c:version>2.5.0</c:version>
     <c:item>
