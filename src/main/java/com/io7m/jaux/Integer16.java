@@ -19,20 +19,20 @@ package com.io7m.jaux;
 import javax.annotation.Nonnull;
 import javax.annotation.concurrent.ThreadSafe;
 
-/** 32-bit integer packing/unpacking functions. */
+/**
+ * 16-bit integer packing/unpacking functions.
+ * 
+ * @since 2.6.0
+ */
 
-@ThreadSafe public final class Integer32
+@ThreadSafe public final class Integer16
 {
   public static @Nonnull byte[] packBigEndian(
     final int i)
   {
-    final byte[] r = new byte[4];
+    final byte[] r = new byte[2];
     int x = i;
 
-    r[3] = (byte) (x & 0xff);
-    x >>= 8;
-    r[2] = (byte) (x & 0xff);
-    x >>= 8;
     r[1] = (byte) (x & 0xff);
     x >>= 8;
     r[0] = (byte) (x & 0xff);
@@ -43,16 +43,13 @@ import javax.annotation.concurrent.ThreadSafe;
   public static @Nonnull byte[] packLittleEndian(
     final int i)
   {
-    final byte[] r = new byte[4];
+    final byte[] r = new byte[2];
     int x = i;
 
     r[0] = (byte) (x & 0xff);
     x >>= 8;
     r[1] = (byte) (x & 0xff);
     x >>= 8;
-    r[2] = (byte) (x & 0xff);
-    x >>= 8;
-    r[3] = (byte) (x & 0xff);
 
     return r;
   }
@@ -60,17 +57,11 @@ import javax.annotation.concurrent.ThreadSafe;
   public static int unpackBigEndian(
     final @Nonnull byte[] buffer)
   {
-    assert (buffer.length == 4);
+    assert (buffer.length == 2);
 
-    int r = 0;
-
-    r |= buffer[0] & 0xFF;
+    int r = (buffer[0] & 0xff);
     r <<= 8;
-    r |= buffer[1] & 0xFF;
-    r <<= 8;
-    r |= buffer[2] & 0xFF;
-    r <<= 8;
-    r |= buffer[3] & 0xFF;
+    r += (buffer[1] & 0xff);
 
     return r;
   }
@@ -78,22 +69,16 @@ import javax.annotation.concurrent.ThreadSafe;
   public static int unpackLittleEndian(
     final @Nonnull byte[] buffer)
   {
-    assert (buffer.length == 4);
+    assert (buffer.length == 2);
 
-    int r = 0;
-
-    r |= buffer[3] & 0xFF;
+    int r = (buffer[1] & 0xff);
     r <<= 8;
-    r |= buffer[2] & 0xFF;
-    r <<= 8;
-    r |= buffer[1] & 0xFF;
-    r <<= 8;
-    r |= buffer[0] & 0xFF;
+    r += (buffer[0] & 0xff);
 
     return r;
   }
 
-  private Integer32()
+  private Integer16()
   {
     throw new UnreachableCodeException();
   }

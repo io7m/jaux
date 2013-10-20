@@ -19,26 +19,20 @@ package com.io7m.jaux;
 import javax.annotation.Nonnull;
 import javax.annotation.concurrent.ThreadSafe;
 
-/** 64-bit integer packing/unpacking functions. */
+/**
+ * 24-bit integer packing/unpacking functions.
+ * 
+ * @since 2.6.0
+ */
 
-@ThreadSafe public final class Integer64
+@ThreadSafe public final class Integer24
 {
   public static @Nonnull byte[] packBigEndian(
-    final long i)
+    final int i)
   {
-    final byte[] r = new byte[8];
-    long x = i;
+    final byte[] r = new byte[3];
+    int x = i;
 
-    r[7] = (byte) (x & 0xff);
-    x >>= 8;
-    r[6] = (byte) (x & 0xff);
-    x >>= 8;
-    r[5] = (byte) (x & 0xff);
-    x >>= 8;
-    r[4] = (byte) (x & 0xff);
-    x >>= 8;
-    r[3] = (byte) (x & 0xff);
-    x >>= 8;
     r[2] = (byte) (x & 0xff);
     x >>= 8;
     r[1] = (byte) (x & 0xff);
@@ -49,73 +43,43 @@ import javax.annotation.concurrent.ThreadSafe;
   }
 
   public static @Nonnull byte[] packLittleEndian(
-    final long i)
+    final int i)
   {
-    final byte[] r = new byte[8];
-    long x = i;
+    final byte[] r = new byte[3];
+    int x = i;
 
     r[0] = (byte) (x & 0xff);
     x >>= 8;
     r[1] = (byte) (x & 0xff);
     x >>= 8;
     r[2] = (byte) (x & 0xff);
-    x >>= 8;
-    r[3] = (byte) (x & 0xff);
-    x >>= 8;
-    r[4] = (byte) (x & 0xff);
-    x >>= 8;
-    r[5] = (byte) (x & 0xff);
-    x >>= 8;
-    r[6] = (byte) (x & 0xff);
-    x >>= 8;
-    r[7] = (byte) (x & 0xff);
 
     return r;
   }
 
-  public static long unpackBigEndian(
+  public static int unpackBigEndian(
     final @Nonnull byte[] buffer)
   {
-    assert (buffer.length == 8);
+    assert (buffer.length == 3);
 
-    long r = 0;
+    int r = 0;
 
     r |= buffer[0] & 0xFF;
     r <<= 8;
     r |= buffer[1] & 0xFF;
     r <<= 8;
     r |= buffer[2] & 0xFF;
-    r <<= 8;
-    r |= buffer[3] & 0xFF;
-    r <<= 8;
-    r |= buffer[4] & 0xFF;
-    r <<= 8;
-    r |= buffer[5] & 0xFF;
-    r <<= 8;
-    r |= buffer[6] & 0xFF;
-    r <<= 8;
-    r |= buffer[7] & 0xFF;
 
     return r;
   }
 
-  public static long unpackLittleEndian(
+  public static int unpackLittleEndian(
     final @Nonnull byte[] buffer)
   {
-    assert (buffer.length == 8);
+    assert (buffer.length == 3);
 
-    long r = 0;
+    int r = 0;
 
-    r |= buffer[7] & 0xFF;
-    r <<= 8;
-    r |= buffer[6] & 0xFF;
-    r <<= 8;
-    r |= buffer[5] & 0xFF;
-    r <<= 8;
-    r |= buffer[4] & 0xFF;
-    r <<= 8;
-    r |= buffer[3] & 0xFF;
-    r <<= 8;
     r |= buffer[2] & 0xFF;
     r <<= 8;
     r |= buffer[1] & 0xFF;
@@ -125,7 +89,7 @@ import javax.annotation.concurrent.ThreadSafe;
     return r;
   }
 
-  private Integer64()
+  private Integer24()
   {
     throw new UnreachableCodeException();
   }
