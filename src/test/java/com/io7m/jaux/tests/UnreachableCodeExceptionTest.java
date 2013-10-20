@@ -35,4 +35,20 @@ public class UnreachableCodeExceptionTest
         e.getMessage());
     }
   }
+
+  @SuppressWarnings("static-method") @Test public
+    void
+    testNoCauseConstructor()
+  {
+    final UnreachableCodeException x = new UnreachableCodeException();
+
+    try {
+      throw new UnreachableCodeException(x);
+    } catch (final UnreachableCodeException e) {
+      Assert.assertEquals(
+        "Unexpectedly reached unreachable code: report this bug",
+        e.getMessage());
+      Assert.assertEquals(x, e.getCause());
+    }
+  }
 }

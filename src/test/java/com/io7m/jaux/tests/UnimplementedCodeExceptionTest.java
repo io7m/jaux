@@ -35,4 +35,18 @@ public class UnimplementedCodeExceptionTest
         e.getMessage());
     }
   }
+
+  @SuppressWarnings("static-method") @Test public void testCauseConstructor()
+  {
+    final UnimplementedCodeException x = new UnimplementedCodeException();
+
+    try {
+      throw new UnimplementedCodeException(x);
+    } catch (final UnimplementedCodeException e) {
+      Assert.assertEquals(
+        "Reached unimplemented code: report this bug",
+        e.getMessage());
+      Assert.assertEquals(x, e.getCause());
+    }
+  }
 }
