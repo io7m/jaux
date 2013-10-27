@@ -1,10 +1,10 @@
 /*
  * Copyright © 2013 <code@io7m.com> http://io7m.com
- *
+ * 
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
  * copyright notice and this permission notice appear in all copies.
- *
+ * 
  * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
  * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
  * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
@@ -13,7 +13,6 @@
  * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
  * IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-
 
 package com.io7m.jaux;
 
@@ -234,6 +233,38 @@ import javax.annotation.concurrent.ThreadSafe;
     }
 
     return n * m;
+  }
+
+  /**
+   * Multiply integers.
+   * 
+   * @param n
+   *          The left value.
+   * @param m
+   *          The right value.
+   * @return <code>n * m</code>
+   * @throws ArithmeticException
+   *           Iff the multiplication would overflow.
+   * 
+   * @since 2.7.0
+   */
+
+  public static long multiply(
+    final long n,
+    final double m)
+    throws ArithmeticException
+  {
+    final double dn = n;
+    final double dm = m;
+    final double r = dn * dm;
+
+    if (r > Long.MAX_VALUE) {
+      throw new ArithmeticException("Integer overflow: " + n + " * " + m);
+    } else if (r < Long.MIN_VALUE) {
+      throw new ArithmeticException("Integer underflow: " + n + " * " + m);
+    }
+
+    return (long) r;
   }
 
   /**

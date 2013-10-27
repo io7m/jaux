@@ -352,6 +352,78 @@ public class CheckedMathTest
     }
   }
 
+  @SuppressWarnings("static-method") @Test public
+    void
+    multiplyLongDoubleCorrect()
+  {
+    for (long index = 0; index < 100; ++index) {
+      final long x = CheckedMathTest.randomSmallLong();
+      final double y = CheckedMathTest.randomSmallDouble();
+      final long z = CheckedMath.multiply(x, y);
+      Assert.assertEquals((long) (x * y), z);
+    }
+  }
+
+  @SuppressWarnings("static-method") @Test public
+    void
+    multiplyLongDoubleOK0()
+  {
+    final long x = Long.MAX_VALUE;
+    final double y = -1;
+    final long z = CheckedMath.multiply(x, y);
+    Assert.assertEquals(Long.MIN_VALUE, z);
+  }
+
+  @SuppressWarnings("static-method") @Test public
+    void
+    multiplyLongDoubleOK1()
+  {
+    final long x = Long.MIN_VALUE + 1;
+    final double y = -1;
+    final long z = CheckedMath.multiply(x, y);
+    Assert.assertEquals(Long.MAX_VALUE, z);
+  }
+
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public
+    void
+    multiplyLongDoubleOverflow0()
+  {
+    final long x = Long.MAX_VALUE;
+    final double y = 2;
+    CheckedMath.multiply(x, y);
+  }
+
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public
+    void
+    multiplyLongDoubleOverflow1()
+  {
+    final long x = Long.MAX_VALUE;
+    final double y = -2;
+    CheckedMath.multiply(x, y);
+  }
+
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public
+    void
+    multiplyLongDoubleUnderflow0()
+  {
+    final long x = Long.MIN_VALUE;
+    final double y = 2;
+    CheckedMath.multiply(x, y);
+  }
+
+  @SuppressWarnings("static-method") @Test(
+    expected = ArithmeticException.class) public
+    void
+    multiplyLongDoubleUnderflow1()
+  {
+    final long x = Long.MIN_VALUE;
+    final double y = -2;
+    CheckedMath.multiply(x, y);
+  }
+
   @SuppressWarnings("static-method") @Test public void multiplyOK0()
   {
     final long x = Long.MAX_VALUE;
