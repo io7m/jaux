@@ -30,3 +30,9 @@
 2013-10-20:io7m-jaux-2.6.0.jar:34921
 2013-10-20:io7m-jaux-2.6.0-documentation.zip:206085
 2013-10-20:io7m-jaux-2.6.0.zip:101386
+2013-10-27:io7m-jaux-2.7.0.jar:35033
+2013-10-27:io7m-jaux-2.7.0-javadoc.jar:186722
+2013-10-27:io7m-jaux-2.7.0-sources.jar:27661
+2013-10-27:io7m-jaux-2.7.0-tests.jar:35958
+2013-10-27:io7m-jaux-2.7.0-documentation.zip:206145
+2013-10-27:io7m-jaux-2.7.0.zip:101775
