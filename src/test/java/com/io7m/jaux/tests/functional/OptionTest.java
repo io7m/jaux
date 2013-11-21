@@ -26,12 +26,13 @@ import com.io7m.jaux.functional.Option.Type;
 
 public class OptionTest
 {
-  @SuppressWarnings("static-method") @Test public void testNone()
+  @SuppressWarnings({ "static-method" }) @Test public void testNone()
   {
     final Option<Integer> n = new Option.None<Integer>();
     Assert.assertEquals(Type.OPTION_NONE, n.type);
     Assert.assertTrue(n.isNone());
     Assert.assertFalse(n.isSome());
+    Assert.assertTrue(Option.none().isNone());
   }
 
   @SuppressWarnings("static-method") @Test public void testNoneEquals()
@@ -69,7 +70,9 @@ public class OptionTest
     Assert.assertFalse(n0.toString().equals(null));
   }
 
-  @SuppressWarnings("static-method") @Test public void testSome()
+  @SuppressWarnings({ "static-method", "boxing" }) @Test public
+    void
+    testSome()
   {
     final Option<Integer> n = new Option.Some<Integer>(Integer.valueOf(32));
     Assert.assertEquals(Type.OPTION_SOME, n.type);
@@ -78,6 +81,7 @@ public class OptionTest
 
     final Option.Some<Integer> i = (Some<Integer>) n;
     Assert.assertEquals(32, i.value.intValue());
+    Assert.assertTrue(Option.some(23).isSome());
   }
 
   @SuppressWarnings("static-method") @Test public void testSomeEquals()

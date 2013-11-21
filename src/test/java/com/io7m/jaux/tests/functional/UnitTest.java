@@ -54,6 +54,7 @@ public class UnitTest
     testEqualsCorrectValue0()
   {
     Assert.assertEquals(Unit.value, new Unit());
+    Assert.assertEquals(Unit.unit(), new Unit());
   }
 
   @SuppressWarnings("static-method") @Test public
@@ -61,6 +62,7 @@ public class UnitTest
     testEqualsCorrectValue1()
   {
     Assert.assertNotSame(Unit.value, null);
+    Assert.assertNotSame(Unit.unit(), null);
   }
 
   @SuppressWarnings("static-method") @Test public

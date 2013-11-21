@@ -77,6 +77,8 @@ public class IndeterminateTest
     final Indeterminate.Failure<Integer, String> f =
       (Failure<Integer, String>) i;
     Assert.assertEquals("failure", f.value);
+
+    Assert.assertTrue(Indeterminate.failure(Integer.valueOf(23)).isFailure());
   }
 
   @SuppressWarnings("static-method") @Test public void testFailureString()
@@ -168,6 +170,8 @@ public class IndeterminateTest
     final Indeterminate.Success<Integer, String> s =
       (Success<Integer, String>) i;
     Assert.assertEquals(Integer.valueOf(100), s.value);
+
+    Assert.assertTrue(Indeterminate.success(Integer.valueOf(23)).isSuccess());
   }
 
   @SuppressWarnings("static-method") @Test public void testSuccessString()

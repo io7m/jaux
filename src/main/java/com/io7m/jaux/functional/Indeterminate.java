@@ -158,8 +158,32 @@ import javax.annotation.concurrent.Immutable;
 
   public static enum Type
   {
-    SUCCESS,
-    FAILURE
+    FAILURE,
+    SUCCESS
+  }
+
+  /**
+   * A convenience function for producing <code>Failure</code> values.
+   * 
+   * @since 2.8.0
+   */
+
+  public static @Nonnull <S, F> Failure<S, F> failure(
+    final F value)
+  {
+    return new Failure<S, F>(value);
+  }
+
+  /**
+   * A convenience function for producing <code>Failure</code> values.
+   * 
+   * @since 2.8.0
+   */
+
+  public static @Nonnull <S, F> Success<S, F> success(
+    final S value)
+  {
+    return new Success<S, F>(value);
   }
 
   public final @Nonnull Type type;

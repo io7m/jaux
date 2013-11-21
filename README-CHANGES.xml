@@ -3,6 +3,31 @@
   <c:project>io7m-jaux</c:project>
 
   <c:release ticket-system="com.io7m.fossil.jaux">
+    <c:date>2013-11-21</c:date>
+    <c:version>2.8.0</c:version>
+    <c:item>
+      <c:date>2013-11-21</c:date>
+      <c:type-code-new/>
+      <c:summary>Add convenience functions some() and none() to create Option values</c:summary>
+    </c:item>
+    <c:item>
+      <c:date>2013-11-21</c:date>
+      <c:type-code-new/>
+      <c:summary>Add convenience functions failure() and success() to create Indeterminate values</c:summary>
+    </c:item>
+    <c:item>
+      <c:date>2013-11-21</c:date>
+      <c:type-code-new/>
+      <c:summary>Add convenience function unit() to create Unit values</c:summary>
+    </c:item>
+    <c:item>
+      <c:date>2013-11-21</c:date>
+      <c:type-code-change/>
+      <c:summary>Deprecate Unit's constructor and "value"</c:summary>
+    </c:item>
+  </c:release>
+
+  <c:release ticket-system="com.io7m.fossil.jaux">
     <c:date>2013-10-27</c:date>
     <c:version>2.7.0</c:version>
     <c:item>

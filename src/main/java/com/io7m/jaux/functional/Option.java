@@ -139,8 +139,34 @@ import javax.annotation.concurrent.Immutable;
 
   public static enum Type
   {
-    OPTION_SOME,
-    OPTION_NONE
+    OPTION_NONE,
+    OPTION_SOME
+  }
+
+  private final static Option.None<?> NONE = new Option.None<Object>();
+
+  /**
+   * A convenient function for producing <code>None</code>.
+   * 
+   * @since 2.8.0
+   */
+
+  @SuppressWarnings("unchecked") public static @Nonnull <A> None<A> none()
+  {
+    return (None<A>) Option.NONE;
+  }
+
+  /**
+   * A convenient function for producing <code>Some(x)</code>, for some
+   * <code>x</code>.
+   * 
+   * @since 2.8.0
+   */
+
+  public static @Nonnull <A> Some<A> some(
+    final A x)
+  {
+    return new Some<A>(x);
   }
 
   public final @Nonnull Type type;
