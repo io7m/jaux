@@ -1,1 +1,1 @@
-io7m-jaux 2.7.0
+io7m-jaux 2.8.0
