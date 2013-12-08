@@ -42,3 +42,9 @@
 2013-11-21:io7m-jaux-2.8.0.jar:35560
 2013-11-21:io7m-jaux-2.8.0-documentation.zip:209000
 2013-11-21:io7m-jaux-2.8.0.zip:102498
+2013-12-08:io7m-jaux-2.9.0-tests.jar:37789
+2013-12-08:io7m-jaux-2.9.0-sources.jar:28840
+2013-12-08:io7m-jaux-2.9.0.jar:35949
+2013-12-08:io7m-jaux-2.9.0-javadoc.jar:193083
+2013-12-08:io7m-jaux-2.9.0-documentation.zip:212718
+2013-12-08:io7m-jaux-2.9.0.zip:104843

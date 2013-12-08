@@ -459,6 +459,66 @@
               <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.8.0.zip">io7m-jaux-2.8.0.zip</a>
             </td>
           </tr>
+          <tr class="page_table_row">
+            <td class="page_table_column">2013-12-08</td>
+            <td class="page_table_column">37789</td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.9.0-tests.jar.asc">asc</a>
+            </td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.9.0-tests.jar">io7m-jaux-2.9.0-tests.jar</a>
+            </td>
+          </tr>
+          <tr class="page_table_row">
+            <td class="page_table_column">2013-12-08</td>
+            <td class="page_table_column">28840</td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.9.0-sources.jar.asc">asc</a>
+            </td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.9.0-sources.jar">io7m-jaux-2.9.0-sources.jar</a>
+            </td>
+          </tr>
+          <tr class="page_table_row">
+            <td class="page_table_column">2013-12-08</td>
+            <td class="page_table_column">35949</td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.9.0.jar.asc">asc</a>
+            </td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.9.0.jar">io7m-jaux-2.9.0.jar</a>
+            </td>
+          </tr>
+          <tr class="page_table_row">
+            <td class="page_table_column">2013-12-08</td>
+            <td class="page_table_column">193083</td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.9.0-javadoc.jar.asc">asc</a>
+            </td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.9.0-javadoc.jar">io7m-jaux-2.9.0-javadoc.jar</a>
+            </td>
+          </tr>
+          <tr class="page_table_row">
+            <td class="page_table_column">2013-12-08</td>
+            <td class="page_table_column">212718</td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.9.0-documentation.zip.asc">asc</a>
+            </td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.9.0-documentation.zip">io7m-jaux-2.9.0-documentation.zip</a>
+            </td>
+          </tr>
+          <tr class="page_table_row">
+            <td class="page_table_column">2013-12-08</td>
+            <td class="page_table_column">104843</td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.9.0.zip.asc">asc</a>
+            </td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.9.0.zip">io7m-jaux-2.9.0.zip</a>
+            </td>
+          </tr>
         </tbody>
       </table>
     </section>
@@ -592,6 +652,19 @@
               <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.8.0-documentation.zip">io7m-jaux-2.8.0-documentation.zip</a>
             </td>
           </tr>
+          <tr class="page_table_row">
+            <td class="page_table_column">2013-12-08</td>
+            <td class="page_table_column">212718</td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.9.0-documentation.zip.asc">asc</a>
+            </td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://io7m.com/software/jaux/doc/2.9.0/d1.xhtml">io7m-jaux 2.9.0</a>
+            </td>
+            <td class="page_table_column">
+              <a class="page_link_file" href="http://distribution.io7m.com/jaux/io7m-jaux-2.9.0-documentation.zip">io7m-jaux-2.9.0-documentation.zip</a>
+            </td>
+          </tr>
         </tbody>
       </table>
     </section>
@@ -600,6 +673,14 @@
 <table xmlns="http://www.w3.org/1999/xhtml"
        class="changelog page_table"
        summary="Changes">
+   <tr class="page_table_row">
+      <td class="page_table_column">2013-12-08</td>
+      <td class="page_table_column">Release: io7m-jaux 2.9.0</td>
+   </tr>
+   <tr class="page_table_row">
+      <td class="page_table_column">2013-12-08</td>
+      <td class="page_table_column">Code new: Add PartialProcedure</td>
+   </tr>
    <tr class="page_table_row">
       <td class="page_table_column">2013-11-21</td>
       <td class="page_table_column">Release: io7m-jaux 2.8.0</td>
