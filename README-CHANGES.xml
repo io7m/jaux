@@ -3,6 +3,16 @@
   <c:project>io7m-jaux</c:project>
 
   <c:release ticket-system="com.io7m.fossil.jaux">
+    <c:date>2013-12-08</c:date>
+    <c:version>2.9.0</c:version>
+    <c:item>
+      <c:date>2013-12-08</c:date>
+      <c:type-code-new/>
+      <c:summary>Add PartialProcedure</c:summary>
+    </c:item>
+  </c:release>
+
+  <c:release ticket-system="com.io7m.fossil.jaux">
     <c:date>2013-11-21</c:date>
     <c:version>2.8.0</c:version>
     <c:item>
