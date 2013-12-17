@@ -25,63 +25,46 @@ public class UnitTest
 {
   @SuppressWarnings("static-method") @Test public void testEqualsCorrect0()
   {
-    Assert.assertEquals(new Unit(), new Unit());
+    Assert.assertEquals(Unit.unit(), Unit.unit());
   }
 
   @SuppressWarnings("static-method") @Test public void testEqualsCorrect1()
   {
-    Assert.assertNotSame(null, new Unit());
+    Assert.assertNotSame(null, Unit.unit());
   }
 
   @SuppressWarnings("static-method") @Test public void testEqualsCorrect2()
   {
-    Assert.assertFalse(new Unit().equals(null));
+    Assert.assertFalse(Unit.unit().equals(null));
   }
 
   @SuppressWarnings("static-method") @Test public void testEqualsCorrect3()
   {
-    final Unit u = new Unit();
+    final Unit u = Unit.unit();
     Assert.assertEquals(u, u);
   }
 
   @SuppressWarnings("static-method") @Test public void testEqualsCorrect4()
   {
-    Assert.assertFalse(new Unit().equals(Integer.valueOf(23)));
+    Assert.assertFalse(Unit.unit().equals(Integer.valueOf(23)));
   }
 
   @SuppressWarnings("static-method") @Test public
     void
     testEqualsCorrectValue0()
   {
-    Assert.assertEquals(Unit.value, new Unit());
-    Assert.assertEquals(Unit.unit(), new Unit());
+    Assert.assertEquals(Unit.unit(), Unit.unit());
   }
 
   @SuppressWarnings("static-method") @Test public
     void
     testEqualsCorrectValue1()
   {
-    Assert.assertNotSame(Unit.value, null);
     Assert.assertNotSame(Unit.unit(), null);
-  }
-
-  @SuppressWarnings("static-method") @Test public
-    void
-    testEqualsCorrectValue2()
-  {
-    Assert.assertNotSame(null, Unit.value);
-  }
-
-  @SuppressWarnings("static-method") @Test public
-    void
-    testEqualsCorrectValue3()
-  {
-    final Unit u = new Unit();
-    Assert.assertEquals(Unit.value, u);
   }
 
   @SuppressWarnings("static-method") @Test public void testHashCode()
   {
-    Assert.assertEquals(new Unit().hashCode(), Unit.UNIT_HASH_CODE);
+    Assert.assertEquals(Unit.unit().hashCode(), Unit.UNIT_HASH_CODE);
   }
 }

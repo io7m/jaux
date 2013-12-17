@@ -25,30 +25,15 @@ import javax.annotation.concurrent.Immutable;
 
 @Immutable public final class Unit
 {
-  private static final Unit            UNIT           = new Unit();
-
-  public static final int              UNIT_HASH_CODE = 0xFACECAFE;
-
-  /**
-   * The unit value.
-   * 
-   * @deprecated Use {@link #unit()}
-   */
-
-  @Deprecated public static final Unit value          = new Unit();
+  private static final Unit UNIT           = new Unit();
+  public static final int   UNIT_HASH_CODE = 0xFACECAFE;
 
   public static @Nonnull Unit unit()
   {
     return Unit.UNIT;
   }
 
-  /**
-   * The unit constructor.
-   * 
-   * @deprecated Use {@link #unit()}
-   */
-
-  @Deprecated public Unit()
+  private Unit()
   {
 
   }

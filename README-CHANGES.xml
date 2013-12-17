@@ -20,6 +20,11 @@
       <c:type-code-change/>
       <c:summary>Delete ApproximatelyEqual*, which has been deprecated since 2.4.0</c:summary>
     </c:item>
+    <c:item>
+      <c:date>2013-12-17</c:date>
+      <c:type-code-change/>
+      <c:summary>Remove deprecated parts of the Unit type</c:summary>
+    </c:item>
   </c:release>
 
   <c:release ticket-system="com.io7m.fossil.jaux">
