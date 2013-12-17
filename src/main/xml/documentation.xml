@@ -19,7 +19,7 @@
 <s:document
   xmlns:s="http://www.io7m.com/schemas/structural/1.0.0"
   xmlns:xi="http://www.w3.org/2001/XInclude">
-  <s:document-title>io7m-jaux 2.9.0 Documentation</s:document-title>
+  <s:document-title>io7m-jaux 3.0.0 Documentation</s:document-title>
   <s:document-style>documentation.css</s:document-style>
   <s:document-contents/>
 
@@ -84,7 +84,7 @@
           <s:verbatim type="example"><![CDATA[<dependency>
   <groupId>com.io7m.jaux</groupId>
   <artifactId>io7m-jaux</artifactId>
-  <version>[2.9.0, 3.0.0)</version>
+  <version>[3.0.0, 4.0.0)</version>
 </dependency>]]></s:verbatim>
         </s:paragraph>
         <s:paragraph>
@@ -122,7 +122,7 @@
           <s:table-body>
 <s:table-row xmlns:s="http://www.io7m.com/schemas/structural/1.0.0">
   <s:table-cell>Linux</s:table-cell>
-  <s:table-cell>3.12.0-1-ARCH</s:table-cell>
+  <s:table-cell>3.12.3-1-ARCH</s:table-cell>
   <s:table-cell>amd64</s:table-cell>
   <s:table-cell>Oracle Corporation</s:table-cell>
   <s:table-cell>1.7.0_45</s:table-cell>
