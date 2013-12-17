@@ -7,13 +7,18 @@
     <c:version>3.0.0</c:version>
     <c:item>
       <c:date>2013-12-17</c:date>
-      <c:type-code-fix/>
+      <c:type-code-change/>
       <c:summary>Option is now abstract</c:summary>
     </c:item>
     <c:item>
       <c:date>2013-12-17</c:date>
       <c:type-code-new/>
       <c:summary>Added Option.map and Option.mapPartial</c:summary>
+    </c:item>
+    <c:item>
+      <c:date>2013-12-17</c:date>
+      <c:type-code-change/>
+      <c:summary>Delete ApproximatelyEqual*, which has been deprecated since 2.4.0</c:summary>
     </c:item>
   </c:release>
 
