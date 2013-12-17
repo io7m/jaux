@@ -16,13 +16,18 @@
 
 package com.io7m.jaux.tests.functional;
 
+import java.io.IOException;
+import java.util.concurrent.atomic.AtomicBoolean;
+
 import org.junit.Assert;
 import org.junit.Test;
 
+import com.io7m.jaux.functional.Function;
 import com.io7m.jaux.functional.Option;
 import com.io7m.jaux.functional.Option.None;
 import com.io7m.jaux.functional.Option.Some;
 import com.io7m.jaux.functional.Option.Type;
+import com.io7m.jaux.functional.PartialFunction;
 
 public class OptionTest
 {
@@ -122,5 +127,88 @@ public class OptionTest
     Assert.assertTrue(n1.toString().equals(n0.toString()));
     Assert.assertFalse(n0.toString().equals(Integer.valueOf(23).toString()));
     Assert.assertFalse(n0.toString().equals(null));
+  }
+
+  @SuppressWarnings("static-method") @Test public void testSomeMap()
+  {
+    @SuppressWarnings("boxing") final Some<Integer> s0 = Option.some(23);
+    final Option<String> r0 = s0.map(new Function<Integer, String>() {
+      @Override public String call(
+        final Integer x)
+      {
+        return x.toString();
+      }
+    });
+
+    Assert.assertTrue(r0.isSome());
+    Assert.assertEquals("23", ((Some<String>) r0).value);
+  }
+
+  @SuppressWarnings("static-method") @Test public void testNoneMap()
+  {
+    final AtomicBoolean called = new AtomicBoolean(false);
+
+    @SuppressWarnings("boxing") final None<Integer> s0 = Option.none();
+    final Option<String> r0 = s0.map(new Function<Integer, String>() {
+      @Override public String call(
+        final Integer x)
+      {
+        called.set(true);
+        return x.toString();
+      }
+    });
+
+    Assert.assertTrue(r0.isNone());
+    Assert.assertFalse(called.get());
+  }
+
+  @SuppressWarnings("static-method") @Test public void testSomeMapPartial()
+    throws IOException
+  {
+    @SuppressWarnings("boxing") final Some<Integer> s0 = Option.some(23);
+    final Option<String> r0 =
+      s0.mapPartial(new PartialFunction<Integer, String, IOException>() {
+        @Override public String call(
+          final Integer x)
+        {
+          return x.toString();
+        }
+      });
+
+    Assert.assertTrue(r0.isSome());
+    Assert.assertEquals("23", ((Some<String>) r0).value);
+  }
+
+  @SuppressWarnings("static-method") @Test(expected = IOException.class) public
+    void
+    testSomeMapPartialRaises()
+      throws IOException
+  {
+    @SuppressWarnings("boxing") final Some<Integer> s0 = Option.some(23);
+    final Option<String> r0 =
+      s0.mapPartial(new PartialFunction<Integer, String, IOException>() {
+        @Override public String call(
+          final Integer x)
+          throws IOException
+        {
+          throw new IOException(x.toString());
+        }
+      });
+  }
+
+  @SuppressWarnings("static-method") @Test public
+    void
+    testSomeMapPartialNoneDoesNotRaise()
+  {
+    final None<Integer> s0 = Option.none();
+    final Option<String> r0 =
+      s0.mapPartial(new PartialFunction<Integer, String, IOException>() {
+        @Override public String call(
+          final Integer x)
+          throws IOException
+        {
+          throw new IOException(x.toString());
+        }
+      });
   }
 }

@@ -39,13 +39,13 @@ import javax.annotation.concurrent.Immutable;
  * </p>
  */
 
-@Immutable public class Option<A>
+@Immutable public abstract class Option<A>
 {
   /**
    * Type enclosing no value.
    */
 
-  public static class None<A> extends Option<A>
+  public static final class None<A> extends Option<A>
   {
     @SuppressWarnings("synthetic-access") public None()
     {
@@ -72,6 +72,18 @@ import javax.annotation.concurrent.Immutable;
       return 0;
     }
 
+    @Override public <B> Option<B> map(
+      final @Nonnull Function<A, B> f)
+    {
+      return Option.none();
+    }
+
+    @Override public <B, E extends Throwable> Option<B> mapPartial(
+      final @Nonnull PartialFunction<A, B, E> f)
+    {
+      return Option.none();
+    }
+
     @Override public String toString()
     {
       final StringBuilder builder = new StringBuilder();
@@ -84,7 +96,7 @@ import javax.annotation.concurrent.Immutable;
    * Type enclosing a value.
    */
 
-  public static class Some<A> extends Option<A>
+  public static final class Some<A> extends Option<A>
   {
     public final A value;
 
@@ -125,6 +137,19 @@ import javax.annotation.concurrent.Immutable;
       result =
         (prime * result) + ((this.value == null) ? 0 : this.value.hashCode());
       return result;
+    }
+
+    @Override public <B> Option<B> map(
+      final @Nonnull Function<A, B> f)
+    {
+      return Option.some(f.call(this.value));
+    }
+
+    @Override public <B, E extends Throwable> Option<B> mapPartial(
+      final @Nonnull PartialFunction<A, B, E> f)
+      throws E
+    {
+      return Option.some(f.call(this.value));
     }
 
     @Override public String toString()
@@ -194,4 +219,28 @@ import javax.annotation.concurrent.Immutable;
   {
     return this.type == Type.OPTION_SOME;
   }
+
+  /**
+   * Apply the function <code>f</code> to the value contained within this
+   * <code>Option</code>, if any.
+   * 
+   * @since 3.0.0
+   */
+
+  public abstract <B> Option<B> map(
+    final @Nonnull Function<A, B> f);
+
+  /**
+   * Apply the partial function <code>f</code> to the value contained within
+   * this <code>Option</code>, if any.
+   * 
+   * @throws E
+   *           Iff <code>f</code> throws <code>E</code>.
+   * 
+   * @since 3.0.0
+   */
+
+  public abstract <B, E extends Throwable> Option<B> mapPartial(
+    final @Nonnull PartialFunction<A, B, E> f)
+    throws E;
 }
