@@ -10,7 +10,7 @@
   <packaging>jar</packaging>
   <name>io7m-jaux</name>
   <description>Auxiliary library</description>
-  <url>http://mvn.io7m.com/jaux/</url>
+  <url>http://mvn.io7m.com/io7m-jaux/</url>
 
   <licenses>
     <license>
@@ -43,7 +43,7 @@
     <site>
       <id>io7m</id>
       <name>io7m.com</name>
-      <url>http://mvn.io7m.com/jaux/</url>
+      <url>http://mvn.io7m.com/io7m-jaux/</url>
     </site>
   </distributionManagement>
 
